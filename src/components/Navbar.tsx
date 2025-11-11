@@ -2,66 +2,65 @@
 
 import { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
-import { Menu, X } from 'lucide-react'
+import { Home, Calendar, Image, Mail, User } from 'lucide-react'
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [active, setActive] = useState('hero')
 
   const navItems = [
-    { name: 'Home', to: 'hero' },
-    { name: 'About', to: 'about' },
-    { name: 'Timeline', to: 'timeline' },
-    { name: 'Gallery', to: 'gallery' },
-    { name: 'Contact', to: 'contact' },
+    { name: 'Home', to: 'hero', icon: Home, color: 'neon-blue' },
+    { name: 'About', to: 'about', icon: User, color: 'neon-pink' },
+    { name: 'Timeline', to: 'timeline', icon: Calendar, color: 'neon-purple' },
+    { name: 'Gallery', to: 'gallery', icon: Image, color: 'neon-yellow' },
+    { name: 'Contact', to: 'contact', icon: Mail, color: 'neon-blue' },
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black shadow-lg shadow-neon-blue/20">
-      <div className="px-4 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo - Enhanced for mobile */}
-          <div className="flex items-center gap-2">
-            <div className="text-2xl md:text-3xl font-bold font-bebas tracking-wider flex items-baseline">
-              <span className="text-neon-blue drop-shadow-[0_0_8px_rgba(0,217,255,1)]">CSE</span>
-              <span className="text-neon-yellow drop-shadow-[0_0_8px_rgba(255,215,0,1)] ml-1">2025</span>
+    <>
+      {/* Desktop Top Navbar */}
+      <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-black/95 border-b border-neon-blue/30">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <div className="text-3xl font-bold font-bebas tracking-wider">
+              <span className="text-neon-blue">CSE</span>
+              <span className="text-neon-yellow ml-2">FRESHERS</span>
+              <span className="text-neon-pink ml-2">2025</span>
             </div>
-            {/* Separator for desktop */}
-            <div className="hidden md:block w-px h-8 bg-neon-blue/30 ml-4"></div>
-          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
-            {navItems.map((item) => (
-              <ScrollLink
-                key={item.name}
-                to={item.to}
-                spy={true}
-                smooth={true}
-                offset={-80}
-                duration={500}
-                className="text-white hover:text-neon-blue transition-colors cursor-pointer font-space text-sm font-semibold uppercase tracking-wider relative group"
-                activeClass="text-neon-blue"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-blue group-hover:w-full transition-all duration-300"></span>
-              </ScrollLink>
-            ))}
+            {/* Desktop Navigation */}
+            <div className="flex items-center gap-8">
+              {navItems.map((item) => {
+                const Icon = item.icon
+                return (
+                  <ScrollLink
+                    key={item.name}
+                    to={item.to}
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                    onSetActive={() => setActive(item.to)}
+                    className={`flex items-center gap-2 cursor-pointer font-space text-sm font-semibold uppercase tracking-wider transition-all group ${
+                      active === item.to ? `text-${item.color}` : 'text-gray-400 hover:text-white'
+                    }`}
+                  >
+                    <Icon size={18} />
+                    {item.name}
+                  </ScrollLink>
+                )
+              })}
+            </div>
           </div>
-
-          {/* Mobile Menu Button - Enhanced visibility */}
-          <button
-            className="md:hidden text-neon-blue p-2.5 rounded-lg bg-gray-900 border-2 border-neon-blue shadow-lg shadow-neon-blue/50 hover:bg-gray-800 transition-all"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={22} strokeWidth={2.5} /> : <Menu size={22} strokeWidth={2.5} />}
-          </button>
         </div>
+      </nav>
 
-        {/* Mobile Navigation - Dropdown */}
-        {isOpen && (
-          <div className="md:hidden mt-4 bg-gray-900 rounded-lg border-2 border-neon-blue/30 overflow-hidden">
-            {navItems.map((item, index) => (
+      {/* Mobile Bottom Navigation (Floating) */}
+      <nav className="md:hidden fixed bottom-4 left-4 right-4 z-50 bg-gray-900 rounded-2xl border-2 border-neon-blue/30 shadow-2xl shadow-neon-blue/20">
+        <div className="flex items-center justify-around py-3 px-2">
+          {navItems.map((item) => {
+            const Icon = item.icon
+            return (
               <ScrollLink
                 key={item.name}
                 to={item.to}
@@ -69,19 +68,43 @@ const Navbar = () => {
                 smooth={true}
                 offset={-80}
                 duration={500}
-                className={`block text-white hover:text-neon-blue hover:bg-gray-800 transition-all cursor-pointer font-space text-sm font-semibold uppercase tracking-wider py-4 px-5 ${
-                  index !== navItems.length - 1 ? 'border-b border-gray-800' : ''
-                }`}
-                activeClass="text-neon-blue bg-gray-800 border-l-4 border-neon-blue"
-                onClick={() => setIsOpen(false)}
+                onSetActive={() => setActive(item.to)}
+                className="cursor-pointer group"
               >
-                {item.name}
+                <div className={`flex flex-col items-center gap-1 transition-all ${
+                  active === item.to ? 'scale-110' : 'scale-100'
+                }`}>
+                  <div className={`p-2.5 rounded-xl transition-all ${
+                    active === item.to 
+                      ? `bg-${item.color}/20 border-2 border-${item.color}` 
+                      : 'bg-gray-800 border-2 border-transparent group-hover:border-gray-600'
+                  }`}>
+                    <Icon 
+                      size={20} 
+                      className={active === item.to ? `text-${item.color}` : 'text-gray-400 group-hover:text-white'}
+                      strokeWidth={2.5}
+                    />
+                  </div>
+                  <span className={`text-[10px] font-space font-bold uppercase tracking-wider ${
+                    active === item.to ? `text-${item.color}` : 'text-gray-500'
+                  }`}>
+                    {item.name}
+                  </span>
+                </div>
               </ScrollLink>
-            ))}
-          </div>
-        )}
+            )
+          })}
+        </div>
+      </nav>
+
+      {/* Mobile Top Brand Badge */}
+      <div className="md:hidden fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-black rounded-full px-5 py-2 border-2 border-neon-blue/40 shadow-lg">
+        <div className="text-lg font-bold font-bebas tracking-wider flex items-center gap-2">
+          <span className="text-neon-blue">CSE</span>
+          <span className="text-neon-yellow">2025</span>
+        </div>
       </div>
-    </nav>
+    </>
   )
 }
 
