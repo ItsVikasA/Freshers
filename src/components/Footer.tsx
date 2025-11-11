@@ -121,7 +121,7 @@ const Footer = () => {
         <div className="border-t border-neon-blue/20 mb-4"></div>
 
         {/* Bottom Footer */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-2 md:gap-3">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 md:gap-4">
           <div className="text-center sm:text-left">
             <p className="text-gray-400 text-[10px] md:text-xs font-space">
               &copy; {currentYear} CSE Freshers Party. All rights reserved.
@@ -131,19 +131,39 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-2">
-            <button
-              onClick={scrollToTop}
-              className="flex items-center gap-1.5 text-gray-400 hover:text-neon-blue transition-colors group"
-              aria-label="Scroll to top"
-            >
-              <span className="text-[10px] md:text-xs font-space">BACK TO TOP</span>
-              <div className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center cyber-card rounded-full border border-neon-blue/30 group-hover:border-neon-blue transition-all group-hover:scale-110">
-                <ArrowUp className="w-3 h-3 md:w-3.5 md:h-3.5 text-neon-blue" />
+          {/* Developed By */}
+          <div className="flex items-center gap-2 bg-gray-800/50 px-3 py-2 rounded-lg border border-neon-blue/20">
+            <span className="text-gray-400 text-[10px] md:text-xs font-space">Developed by:</span>
+            <div className="flex items-center gap-2">
+              {/* Developer Profile Picture */}
+              <div className="w-6 h-6 md:w-7 md:h-7 rounded-full border-2 border-neon-blue overflow-hidden bg-gray-900 flex items-center justify-center">
+                {/* Placeholder - Replace with actual image */}
+                <svg className="w-3 h-3 md:w-4 md:h-4 text-neon-blue" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                </svg>
+                {/* Uncomment when you have image */}
+                {/* <img src="/developer.jpg" alt="Developer" className="w-full h-full object-cover" /> */}
               </div>
-            </button>
+              <span className="text-neon-blue text-[10px] md:text-xs font-space font-bold">Your Name</span>
+            </div>
           </div>
+
         </div>
+
+        {/* Back to Top */}
+        <div className="mt-4 flex justify-center">
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-1.5 text-gray-400 hover:text-neon-blue transition-colors group"
+            aria-label="Scroll to top"
+          >
+            <span className="text-[10px] md:text-xs font-space">BACK TO TOP</span>
+            <div className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center cyber-card rounded-full border border-neon-blue/30 group-hover:border-neon-blue transition-all group-hover:scale-110">
+              <ArrowUp className="w-3 h-3 md:w-3.5 md:h-3.5 text-neon-blue" />
+            </div>
+          </button>
+        </div>
+      </div>
 
         {/* Additional Links */}
         <div className="mt-4 text-center">
