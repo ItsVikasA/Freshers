@@ -136,15 +136,15 @@ const Footer = () => {
             href="https://linktr.ee/Its_VikasA" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-gray-800/50 px-3 py-2 rounded-lg border border-neon-blue/20 hover:border-neon-blue hover:bg-gray-800 transition-all group"
+            className="flex items-center gap-2 bg-gray-800/50 px-4 py-2.5 rounded-lg border border-neon-blue/20 hover:border-neon-blue hover:bg-gray-800 transition-all group"
           >
-            <span className="text-gray-400 text-[10px] md:text-xs font-space">Developed by:</span>
+            <span className="text-gray-400 text-xs md:text-sm font-space">Developed by:</span>
             <div className="flex items-center gap-2">
               {/* Developer Profile Picture */}
-              <div className="w-6 h-6 md:w-7 md:h-7 rounded-full border-2 border-neon-blue overflow-hidden bg-gray-900 group-hover:scale-110 transition-transform">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-neon-blue overflow-hidden bg-gray-900 group-hover:scale-110 transition-transform shadow-lg shadow-neon-blue/30">
                 <img src="/gallery/vikas.jpg" alt="Vikas" className="w-full h-full object-cover" />
               </div>
-              <span className="text-neon-blue text-[10px] md:text-xs font-space font-bold group-hover:text-white transition-colors">Vikas</span>
+              <span className="text-neon-blue text-xs md:text-sm font-space font-bold group-hover:text-white transition-colors">Vikas</span>
             </div>
           </a>
 
