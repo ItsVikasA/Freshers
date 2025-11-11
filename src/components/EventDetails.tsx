@@ -12,13 +12,13 @@ const EventDetails = () => {
     {
       icon: <Calendar className="w-8 h-8" />,
       title: 'Date',
-      info: 'To Be Announced',
-      description: 'Stay tuned for the official announcement',
+      info: 'December 14, 2025',
+      description: 'Mark your calendars!',
     },
     {
       icon: <Clock className="w-8 h-8" />,
       title: 'Time',
-      info: '6:00 PM Onwards',
+      info: '9:00 AM Onwards',
       description: 'Make sure to arrive on time!',
     },
     {

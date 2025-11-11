@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Countdown from 'react-countdown'
 import { Link as ScrollLink } from 'react-scroll'
-import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa'
+import { Calendar, MapPin } from 'lucide-react'
 
 const Hero = () => {
   // Event date - Update this to your actual event date
