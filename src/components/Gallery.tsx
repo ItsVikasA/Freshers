@@ -86,20 +86,20 @@ const Gallery = () => {
             >
               <FaTimes />
             </button>
-            <div className="max-w-4xl max-h-[90vh] relative">
-              <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] rounded-lg overflow-hidden">
+            <div className="w-full max-w-7xl mx-auto px-4">
+              <div className="relative w-full" style={{ height: '85vh' }}>
                 <Image
                   src={images[selectedImage].src}
                   alt={images[selectedImage].alt}
                   fill
                   className="object-contain"
-                  sizes="90vw"
+                  sizes="95vw"
                   priority
                 />
               </div>
-              <div className="mt-4 text-center">
+              <div className="mt-6 text-center flex justify-center gap-4">
                 <button
-                  className="mx-2 px-4 py-2 bg-primary rounded hover:bg-primary/80 transition-colors"
+                  className="px-6 py-3 bg-primary rounded-lg hover:bg-primary/80 transition-colors font-semibold text-white"
                   onClick={(e) => {
                     e.stopPropagation()
                     setSelectedImage(selectedImage > 0 ? selectedImage - 1 : images.length - 1)
@@ -108,7 +108,7 @@ const Gallery = () => {
                   Previous
                 </button>
                 <button
-                  className="mx-2 px-4 py-2 bg-secondary rounded hover:bg-secondary/80 transition-colors"
+                  className="px-6 py-3 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors font-semibold text-white"
                   onClick={(e) => {
                     e.stopPropagation()
                     setSelectedImage(selectedImage < images.length - 1 ? selectedImage + 1 : 0)
