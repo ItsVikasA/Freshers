@@ -6,8 +6,8 @@ import { Link as ScrollLink } from 'react-scroll'
 import { Calendar, MapPin } from 'lucide-react'
 
 const Hero = () => {
-  // Event date - Update this to your actual event date
-  const eventDate = process.env.NEXT_PUBLIC_EVENT_DATE || '2025-12-31T18:00:00'
+  // Event date - November 14, 2025 at 9:00 AM
+  const eventDate = process.env.NEXT_PUBLIC_EVENT_DATE || '2025-11-14T09:00:00'
 
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
     if (completed) {
