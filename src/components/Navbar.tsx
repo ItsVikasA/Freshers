@@ -18,18 +18,18 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Top Navbar */}
-      <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-black/95 border-b border-neon-blue/30">
-        <div className="container mx-auto px-6 py-4">
+      <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-black border-b-2 border-neon-blue/30 shadow-lg">
+        <div className="container mx-auto px-6 py-3.5">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="text-3xl font-bold font-bebas tracking-wider">
-              <span className="text-neon-blue">CSE</span>
-              <span className="text-neon-yellow ml-2">FRESHERS</span>
-              <span className="text-neon-pink ml-2">2025</span>
+            <div className="flex items-center gap-1">
+              <span className="text-2xl font-bold font-bebas tracking-wider text-neon-blue">CSE</span>
+              <span className="text-2xl font-bold font-bebas tracking-wider text-neon-yellow">FRESHERS</span>
+              <span className="text-2xl font-bold font-bebas tracking-wider text-neon-pink">2025</span>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-10">
               {navItems.map((item) => {
                 const Icon = item.icon
                 return (
@@ -38,14 +38,14 @@ const Navbar = () => {
                     to={item.to}
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-80}
                     duration={500}
                     onSetActive={() => setActive(item.to)}
-                    className={`flex items-center gap-2 cursor-pointer font-space text-sm font-semibold uppercase tracking-wider transition-all group ${
-                      active === item.to ? `text-${item.color}` : 'text-gray-400 hover:text-white'
+                    className={`flex items-center gap-2 cursor-pointer font-space text-sm font-semibold uppercase tracking-wider transition-all ${
+                      active === item.to ? 'text-neon-blue' : 'text-gray-300 hover:text-white'
                     }`}
                   >
-                    <Icon size={18} />
+                    <Icon size={18} strokeWidth={2} />
                     {item.name}
                   </ScrollLink>
                 )
