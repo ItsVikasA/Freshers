@@ -11,9 +11,9 @@ const Team = () => {
 
   const teamMembers = [
     {
-      name: 'Dr. Principal Name',
-      designation: 'Principal',
-      image: '/team/principal.jpg',
+      name: 'Coordinator Name',
+      designation: 'Association Coordinator',
+      image: '/team/coordinator.jpg',
       color: 'neon-blue',
     },
     {
@@ -29,9 +29,9 @@ const Team = () => {
       color: 'neon-purple',
     },
     {
-      name: 'Coordinator Name',
-      designation: 'Association Coordinator',
-      image: '/team/coordinator.jpg',
+      name: 'Dr. Principal Name',
+      designation: 'Principal',
+      image: '/team/principal.jpg',
       color: 'neon-yellow',
     },
   ]
