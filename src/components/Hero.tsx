@@ -46,7 +46,7 @@ const Hero = () => {
               <div className={`absolute -inset-0.5 bg-gradient-to-r ${item.color} rounded-2xl blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse`}></div>
               
               {/* Timer box */}
-              <div className="relative flex flex-col items-center bg-gray-900/90 backdrop-blur-xl px-3 sm:px-5 md:px-7 py-4 sm:py-5 md:py-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-110 hover:-translate-y-2">
+              <div className="relative flex flex-col items-center bg-gray-900 px-3 sm:px-5 md:px-7 py-4 sm:py-5 md:py-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-110 hover:-translate-y-2">
                 {/* Number with animated gradient */}
                 <motion.span 
                   className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-orbitron bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-1 sm:mb-2`}

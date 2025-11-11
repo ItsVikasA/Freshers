@@ -32,7 +32,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
           ? 'cyber-card border-b-2 border-neon-blue/30 shadow-neon-blue py-2 sm:py-3' 
-          : 'bg-gradient-to-b from-black/50 to-transparent backdrop-blur-sm py-4 sm:py-5'
+          : 'bg-gray-900/95 py-4 sm:py-5'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6">
@@ -142,7 +142,7 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm lg:hidden z-40"
+            className="fixed inset-0 bg-black/80 lg:hidden z-40"
             onClick={() => setIsOpen(false)}
           />
         )}
