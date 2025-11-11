@@ -56,14 +56,14 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Top Navigation */}
-      <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b-2 border-neon-blue/30 shadow-lg">
+      <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-black border-b-2 border-neon-blue/30 shadow-lg">
         <div className="px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-1">
-              <span className="text-xl font-bold font-bebas tracking-wider text-neon-blue">CSE</span>
-              <span className="text-xl font-bold font-bebas tracking-wider text-neon-yellow">FRESHERS</span>
-              <span className="text-xl font-bold font-bebas tracking-wider text-neon-pink">2025</span>
+              <span className="text-lg font-bold font-bebas tracking-wider text-neon-blue drop-shadow-[0_0_10px_rgba(0,217,255,1)]">CSE</span>
+              <span className="text-lg font-bold font-bebas tracking-wider text-neon-yellow drop-shadow-[0_0_10px_rgba(255,215,0,1)]">FRESHERS</span>
+              <span className="text-lg font-bold font-bebas tracking-wider text-neon-pink drop-shadow-[0_0_10px_rgba(255,16,240,1)]">2025</span>
             </div>
 
             {/* Mobile Menu Button */}

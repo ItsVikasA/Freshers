@@ -32,7 +32,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="relative bg-gradient-to-b from-transparent to-black/50 pt-12 pb-4 border-t border-neon-blue/20">
+    <footer className="relative bg-gray-900 pt-12 pb-4 border-t border-neon-blue/20">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Main Footer Content */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
