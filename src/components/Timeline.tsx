@@ -177,11 +177,34 @@ const Timeline = () => {
           </p>
         </motion.div>
 
-        {/* Timeline Items */}
-        <div className="max-w-4xl mx-auto space-y-0">
-          {schedule.map((item, index) => (
-            <TimelineItem key={index} item={item} index={index} />
-          ))}
+        {/* Timeline Items with Vertical Road Line */}
+        <div className="max-w-4xl mx-auto relative">
+          {/* Vertical Road Line - Center for both mobile and desktop */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2">
+            {/* Gradient Road */}
+            <div className="absolute inset-0 bg-gradient-to-b from-neon-blue via-neon-pink to-neon-purple opacity-40"></div>
+            {/* Animated Dots */}
+            <motion.div
+              className="absolute inset-0 bg-repeat-y"
+              style={{
+                backgroundImage: 'linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(0,217,255,0.8) 40%, rgba(0,217,255,0.8) 60%, transparent 60%, transparent 100%)',
+                backgroundSize: '2px 30px',
+              }}
+              animate={{ backgroundPositionY: ['0px', '30px'] }}
+              transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+            />
+          </div>
+
+          <div className="space-y-0">
+            {schedule.map((item, index) => (
+              <div key={index} className="relative">
+                {/* Center Dot on Road */}
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-neon-blue to-neon-pink border-2 border-white shadow-lg shadow-neon-blue/50 z-10"></div>
+                
+                <TimelineItem item={item} index={index} />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Note */}
