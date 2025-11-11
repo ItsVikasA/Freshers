@@ -12,7 +12,7 @@ const EventDetails = () => {
     {
       icon: <Calendar className="w-8 h-8" />,
       title: 'Date',
-      info: 'December 14, 2025',
+      info: 'November 14, 2025',
       description: 'Mark your calendars!',
     },
     {

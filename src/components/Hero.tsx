@@ -88,12 +88,12 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
           >
             <div className="flex items-center gap-2 glass-effect px-4 py-2 rounded-full">
-              <FaCalendarAlt className="text-primary" />
-              <span className="text-sm md:text-base">Date TBA</span>
+              <Calendar className="text-primary w-5 h-5" />
+              <span className="text-sm md:text-base">November 14, 2025 | 9:00 AM</span>
             </div>
             <div className="flex items-center gap-2 glass-effect px-4 py-2 rounded-full">
-              <FaMapMarkerAlt className="text-accent" />
-              <span className="text-sm md:text-base">Venue TBA</span>
+              <MapPin className="text-accent w-5 h-5" />
+              <span className="text-sm md:text-base">Auditorium</span>
             </div>
           </motion.div>
 
