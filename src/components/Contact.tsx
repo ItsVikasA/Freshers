@@ -10,22 +10,25 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="w-8 h-8" />,
+      icon: <Mail className="w-6 h-6" />,
       title: 'Email',
       info: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'cse.committee@college.edu',
       link: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'cse.committee@college.edu'}`,
+      color: 'neon-blue',
     },
     {
-      icon: <Phone className="w-8 h-8" />,
+      icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
       info: '+91 12345 67890',
       link: 'tel:+911234567890',
+      color: 'neon-pink',
     },
     {
-      icon: <MapPin className="w-8 h-8" />,
+      icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
       info: 'CSE Department, Main Building',
       link: '#',
+      color: 'neon-purple',
     },
   ]
 
@@ -36,10 +39,10 @@ const Contact = () => {
   ]
 
   const socialLinks = [
-    { icon: <Facebook className="w-6 h-6" />, name: 'Facebook', url: '#' },
-    { icon: <Instagram className="w-6 h-6" />, name: 'Instagram', url: '#' },
-    { icon: <Twitter className="w-6 h-6" />, name: 'Twitter', url: '#' },
-    { icon: <Linkedin className="w-6 h-6" />, name: 'LinkedIn', url: '#' },
+    { icon: <Facebook className="w-5 h-5" />, name: 'Facebook', url: '#', color: 'neon-blue' },
+    { icon: <Instagram className="w-5 h-5" />, name: 'Instagram', url: '#', color: 'neon-pink' },
+    { icon: <Twitter className="w-5 h-5" />, name: 'Twitter', url: '#', color: 'neon-blue' },
+    { icon: <Linkedin className="w-5 h-5" />, name: 'LinkedIn', url: '#', color: 'neon-purple' },
   ]
 
   return (
@@ -48,57 +51,75 @@ const Contact = () => {
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4">
-            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Contact Us
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-bebas mb-3 tracking-wider">
+            <span className="bg-gradient-to-r from-neon-blue via-neon-pink to-neon-purple bg-clip-text text-transparent">
+              GET IN TOUCH
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Have questions? Reach out to us!
+          <div className="w-20 h-0.5 bg-gradient-to-r from-neon-blue to-neon-pink mx-auto mb-6"></div>
+          <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto font-space">
+            Questions? <span className="text-neon-pink">We're here to help!</span> 💬
           </p>
         </motion.div>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-8 max-w-5xl mx-auto">
           {contactInfo.map((contact, index) => (
             <motion.a
               key={index}
               href={contact.link}
               initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-effect p-5 sm:p-6 rounded-xl text-center hover:scale-105 transition-transform group"
+              whileHover={{ scale: 1.05, y: -5 }}
+              className={`cyber-card p-4 rounded-2xl text-center group cursor-pointer border-2 border-${contact.color}/30 hover:border-${contact.color}/60 transition-all relative overflow-hidden`}
             >
-              <div className="text-primary group-hover:text-accent transition-colors mb-3 sm:mb-4 flex justify-center">
-                {contact.icon}
+              <div className={`absolute inset-0 bg-${contact.color}/5 opacity-0 group-hover:opacity-100 transition-opacity`} />
+              <div className="relative z-10">
+                <div className={`text-${contact.color} mb-3 flex justify-center group-hover:scale-110 transition-transform`}>
+                  {contact.icon}
+                </div>
+                <h3 className={`text-sm md:text-base font-bold font-space uppercase tracking-wide text-${contact.color} mb-1`}>
+                  {contact.title}
+                </h3>
+                <p className="text-xs md:text-sm text-gray-300 font-space break-words">{contact.info}</p>
               </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">{contact.title}</h3>
-              <p className="text-sm sm:text-base text-gray-300">{contact.info}</p>
             </motion.a>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4 max-w-6xl mx-auto">
           {/* Organizing Committee */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="glass-effect p-5 sm:p-8 rounded-xl"
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="cyber-card p-5 rounded-2xl border-2 border-neon-blue/30"
           >
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-accent">Organizing Committee</h3>
-            <div className="space-y-3 sm:space-y-4">
+            <h3 className="text-lg md:text-xl font-bold mb-4 font-bebas tracking-wider">
+              <span className="text-neon-blue">ORGANIZING TEAM</span>
+            </h3>
+            <div className="space-y-3">
               {organizers.map((organizer, index) => (
-                <div key={index} className="border-l-4 border-primary pl-3 sm:pl-4">
-                  <h4 className="font-bold text-white text-sm sm:text-base">{organizer.name}</h4>
-                  <p className="text-gray-400 text-xs sm:text-sm">{organizer.role}</p>
-                  <p className="text-gray-300 text-xs sm:text-sm">{organizer.phone}</p>
-                </div>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="border-l-2 border-neon-blue/50 pl-3 hover:border-neon-blue hover:pl-4 transition-all"
+                >
+                  <h4 className="font-bold text-white text-xs md:text-sm font-space">{organizer.name}</h4>
+                  <p className="text-neon-blue/70 text-[10px] md:text-xs">{organizer.role}</p>
+                  <p className="text-gray-300 text-[10px] md:text-xs font-space">{organizer.phone}</p>
+                </motion.div>
               ))}
             </div>
           </motion.div>
@@ -106,34 +127,40 @@ const Contact = () => {
           {/* Social Media & Quick Message */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="glass-effect p-5 sm:p-8 rounded-xl"
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="cyber-card p-5 rounded-2xl border-2 border-neon-pink/30"
           >
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-accent">Follow Us</h3>
-            <p className="text-sm sm:text-base text-gray-400 mb-4">
-              Follow us for event updates, behind-the-scenes, and more! Drop a DM if you have any questions 💬
+            <h3 className="text-lg md:text-xl font-bold mb-3 font-bebas tracking-wider">
+              <span className="text-neon-pink">CONNECT WITH US</span>
+            </h3>
+            <p className="text-xs md:text-sm text-gray-400 mb-4 font-space">
+              Follow for <span className="text-neon-pink">updates</span>, <span className="text-neon-blue">BTS</span>, and more! 💬
             </p>
-            <div className="flex gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <div className="flex gap-2 md:gap-3 mb-6">
               {socialLinks.map((social, index) => (
-                <a
+                <motion.a
                   key={index}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white/10 rounded-full hover:bg-primary hover:scale-110 transition-all"
+                  whileHover={{ scale: 1.1, y: -3 }}
+                  className={`w-9 h-9 md:w-10 md:h-10 flex items-center justify-center cyber-card rounded-full border border-${social.color}/30 hover:border-${social.color} text-${social.color} transition-all`}
                   aria-label={social.name}
                 >
                   {social.icon}
-                </a>
+                </motion.a>
               ))}
             </div>
 
-            <div className="border-t border-gray-600 pt-4 sm:pt-6">
-              <h4 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Office Hours</h4>
-              <p className="text-gray-300 text-xs sm:text-sm">Monday - Friday: 9:00 AM - 5:00 PM</p>
-              <p className="text-gray-300 text-xs sm:text-sm">Saturday: 10:00 AM - 2:00 PM</p>
-              <p className="text-gray-300 text-xs sm:text-sm">Sunday: Closed</p>
+            <div className="border-t border-neon-pink/20 pt-4">
+              <h4 className="font-bold mb-2 text-xs md:text-sm font-space text-neon-pink/80">OFFICE HOURS</h4>
+              <div className="space-y-1 text-[10px] md:text-xs font-space">
+                <p className="text-gray-300">Mon - Fri: <span className="text-neon-blue">9:00 AM - 5:00 PM</span></p>
+                <p className="text-gray-300">Saturday: <span className="text-neon-blue">10:00 AM - 2:00 PM</span></p>
+                <p className="text-gray-400">Sunday: <span className="text-gray-500">Closed</span></p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -141,12 +168,13 @@ const Contact = () => {
         {/* Note */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-12 text-center"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-8 text-center max-w-4xl mx-auto"
         >
-          <p className="text-gray-400 text-sm">
-            * For urgent queries, please call the organizing committee members directly.
+          <p className="text-gray-400 text-[10px] md:text-xs font-space">
+            <span className="text-neon-yellow">⚡</span> For urgent queries, call the organizing committee directly
           </p>
         </motion.div>
       </div>
