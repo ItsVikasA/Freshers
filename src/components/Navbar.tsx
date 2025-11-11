@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Top Navbar */}
-      <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-black border-b-2 border-neon-blue/30 shadow-lg">
+      <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b-2 border-neon-blue/30 shadow-lg">
         <div className="container mx-auto px-6 py-3.5">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -56,7 +56,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Top Navigation */}
-      <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-black border-b-2 border-neon-blue/30 shadow-lg">
+      <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b-2 border-neon-blue/30 shadow-lg">
         <div className="px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
