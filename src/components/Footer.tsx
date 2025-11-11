@@ -132,21 +132,21 @@ const Footer = () => {
           </div>
 
           {/* Developed By */}
-          <div className="flex items-center gap-2 bg-gray-800/50 px-3 py-2 rounded-lg border border-neon-blue/20">
+          <a 
+            href="https://linktr.ee/Its_VikasA" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-gray-800/50 px-3 py-2 rounded-lg border border-neon-blue/20 hover:border-neon-blue hover:bg-gray-800 transition-all group"
+          >
             <span className="text-gray-400 text-[10px] md:text-xs font-space">Developed by:</span>
             <div className="flex items-center gap-2">
               {/* Developer Profile Picture */}
-              <div className="w-6 h-6 md:w-7 md:h-7 rounded-full border-2 border-neon-blue overflow-hidden bg-gray-900 flex items-center justify-center">
-                {/* Placeholder - Replace with actual image */}
-                <svg className="w-3 h-3 md:w-4 md:h-4 text-neon-blue" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
-                {/* Uncomment when you have image */}
-                {/* <img src="/developer.jpg" alt="Developer" className="w-full h-full object-cover" /> */}
+              <div className="w-6 h-6 md:w-7 md:h-7 rounded-full border-2 border-neon-blue overflow-hidden bg-gray-900 group-hover:scale-110 transition-transform">
+                <img src="/gallery/vikas.jpg" alt="Vikas" className="w-full h-full object-cover" />
               </div>
-              <span className="text-neon-blue text-[10px] md:text-xs font-space font-bold">Your Name</span>
+              <span className="text-neon-blue text-[10px] md:text-xs font-space font-bold group-hover:text-white transition-colors">Vikas</span>
             </div>
-          </div>
+          </a>
 
         </div>
 
