@@ -16,19 +16,21 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 border-b-2 border-neon-blue/30 shadow-lg">
-      <div className="container mx-auto px-4 py-3">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black shadow-lg shadow-neon-blue/20">
+      <div className="px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="text-2xl font-bold font-bebas tracking-wider">
-            <span className="bg-gradient-to-r from-neon-blue via-neon-pink to-neon-purple bg-clip-text text-transparent">
-              CSE
-            </span>
-            <span className="text-neon-yellow ml-1">2025</span>
+          {/* Logo - Enhanced for mobile */}
+          <div className="flex items-center gap-2">
+            <div className="text-2xl md:text-3xl font-bold font-bebas tracking-wider flex items-baseline">
+              <span className="text-neon-blue drop-shadow-[0_0_8px_rgba(0,217,255,1)]">CSE</span>
+              <span className="text-neon-yellow drop-shadow-[0_0_8px_rgba(255,215,0,1)] ml-1">2025</span>
+            </div>
+            {/* Separator for desktop */}
+            <div className="hidden md:block w-px h-8 bg-neon-blue/30 ml-4"></div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <ScrollLink
                 key={item.name}
@@ -37,44 +39,45 @@ const Navbar = () => {
                 smooth={true}
                 offset={-80}
                 duration={500}
-                className="text-white hover:text-neon-blue transition-colors cursor-pointer font-space text-sm uppercase tracking-wider"
+                className="text-white hover:text-neon-blue transition-colors cursor-pointer font-space text-sm font-semibold uppercase tracking-wider relative group"
                 activeClass="text-neon-blue"
               >
                 {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-blue group-hover:w-full transition-all duration-300"></span>
               </ScrollLink>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Enhanced visibility */}
           <button
-            className="md:hidden text-white p-2 rounded-lg bg-gray-800 border-2 border-neon-blue"
+            className="md:hidden text-neon-blue p-2.5 rounded-lg bg-gray-900 border-2 border-neon-blue shadow-lg shadow-neon-blue/50 hover:bg-gray-800 transition-all"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={22} strokeWidth={2.5} /> : <Menu size={22} strokeWidth={2.5} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Dropdown */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-gray-900 border-b-2 border-neon-blue/30">
-            <div className="flex flex-col py-4">
-              {navItems.map((item) => (
-                <ScrollLink
-                  key={item.name}
-                  to={item.to}
-                  spy={true}
-                  smooth={true}
-                  offset={-80}
-                  duration={500}
-                  className="text-white hover:text-neon-blue hover:bg-gray-800 transition-colors cursor-pointer font-space text-sm uppercase tracking-wider py-3 px-6"
-                  activeClass="text-neon-blue bg-gray-800"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </ScrollLink>
-              ))}
-            </div>
+          <div className="md:hidden mt-4 bg-gray-900 rounded-lg border-2 border-neon-blue/30 overflow-hidden">
+            {navItems.map((item, index) => (
+              <ScrollLink
+                key={item.name}
+                to={item.to}
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                className={`block text-white hover:text-neon-blue hover:bg-gray-800 transition-all cursor-pointer font-space text-sm font-semibold uppercase tracking-wider py-4 px-5 ${
+                  index !== navItems.length - 1 ? 'border-b border-gray-800' : ''
+                }`}
+                activeClass="text-neon-blue bg-gray-800 border-l-4 border-neon-blue"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </ScrollLink>
+            ))}
           </div>
         )}
       </div>
