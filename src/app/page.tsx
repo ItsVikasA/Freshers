@@ -19,9 +19,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Team />
       <EventDetails />
       <Timeline />
-      <Team />
       <Highlights />
       <Gallery />
       <Contact />
