@@ -5,6 +5,7 @@ import Hero from '@/components/Hero'
 import About from '@/components/About'
 import EventDetails from '@/components/EventDetails'
 import Timeline from '@/components/Timeline'
+import Team from '@/components/Team'
 import Highlights from '@/components/Highlights'
 import Gallery from '@/components/Gallery'
 import Contact from '@/components/Contact'
@@ -20,6 +21,7 @@ export default function Home() {
       <About />
       <EventDetails />
       <Timeline />
+      <Team />
       <Highlights />
       <Gallery />
       <Contact />
