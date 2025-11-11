@@ -63,7 +63,7 @@ const Contact = () => {
           </h2>
           <div className="w-20 h-0.5 bg-gradient-to-r from-neon-blue to-neon-pink mx-auto mb-6"></div>
           <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto font-space">
-            Questions? <span className="text-neon-pink">We're here to help!</span> 💬
+            Questions? <span className="text-neon-pink">We&apos;re here to help!</span> 💬
           </p>
         </motion.div>
 
