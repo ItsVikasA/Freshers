@@ -163,7 +163,6 @@ const Footer = () => {
             </div>
           </button>
         </div>
-      </div>
 
         {/* Additional Links */}
         <div className="mt-4 text-center">
