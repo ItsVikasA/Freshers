@@ -33,9 +33,9 @@ const Contact = () => {
   ]
 
   const organizers = [
-    { name: 'Student Coordinator 1', role: 'Event Head', phone: '+91 98765 43210' },
-    { name: 'Student Coordinator 2', role: 'Technical Head', phone: '+91 98765 43211' },
-    { name: 'Student Coordinator 3', role: 'Creative Head', phone: '+91 98765 43212' },
+    { name: 'Prabhu Talikoti', role: 'Event Head', phone: '+91 73378 23233' },
+    { name: 'Vikas', role: 'Technical Head', phone: '+91 70190 03366' },
+    { name: 'Ompreet Hadli', role: 'Creative Head', phone: '+91 88676 16150' },
   ]
 
   const socialLinks = [
