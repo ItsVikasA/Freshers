@@ -49,12 +49,15 @@ const Gallery = () => {
               className="relative group cursor-pointer overflow-hidden rounded-xl"
               onClick={() => setSelectedImage(index)}
             >
-              {/* Placeholder for images */}
-              <div className="aspect-square bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-gray-400 text-sm">{image.category}</p>
-                  <p className="text-gray-500 text-xs mt-2">Image placeholder</p>
-                </div>
+              {/* Event Image */}
+              <div className="aspect-square relative overflow-hidden">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                />
               </div>
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
@@ -77,22 +80,22 @@ const Gallery = () => {
             onClick={() => setSelectedImage(null)}
           >
             <button
-              className="absolute top-4 right-4 text-white text-3xl hover:text-accent transition-colors"
+              className="absolute top-4 right-4 text-white text-3xl hover:text-accent transition-colors z-10"
               onClick={() => setSelectedImage(null)}
+              aria-label="Close"
             >
               <FaTimes />
             </button>
             <div className="max-w-4xl max-h-[90vh] relative">
-              <div className="aspect-video bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center rounded-lg">
-                <div className="text-center">
-                  <p className="text-white text-lg">{images[selectedImage].category}</p>
-                  <p className="text-gray-400 mt-2">
-                    {images[selectedImage].alt}
-                  </p>
-                  <p className="text-gray-500 text-sm mt-4">
-                    Replace with actual images in /public/gallery/
-                  </p>
-                </div>
+              <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] rounded-lg overflow-hidden">
+                <Image
+                  src={images[selectedImage].src}
+                  alt={images[selectedImage].alt}
+                  fill
+                  className="object-contain"
+                  sizes="90vw"
+                  priority
+                />
               </div>
               <div className="mt-4 text-center">
                 <button
@@ -118,7 +121,7 @@ const Gallery = () => {
           </motion.div>
         )}
 
-        {/* Note about images */}
+        {/* Note */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -126,7 +129,7 @@ const Gallery = () => {
           className="mt-12 text-center"
         >
           <p className="text-gray-400 text-sm">
-            * Add actual event photos to the /public/gallery/ directory
+            Click on any image to view in full size 📸
           </p>
         </motion.div>
       </div>
