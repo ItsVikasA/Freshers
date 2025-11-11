@@ -11,31 +11,66 @@ const Hero = () => {
 
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
     if (completed) {
-      return <span className="text-4xl font-bold">Event is Live! 🎉</span>
+      return (
+        <motion.div 
+          className="text-4xl md:text-6xl font-bold"
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            Event is Live! 🎉
+          </span>
+        </motion.div>
+      )
     } else {
       return (
-        <div className="flex gap-4 md:gap-8 justify-center">
+        <div className="flex gap-2 sm:gap-3 md:gap-6 justify-center flex-wrap">
           {[
-            { value: days, label: 'Days' },
-            { value: hours, label: 'Hours' },
-            { value: minutes, label: 'Minutes' },
-            { value: seconds, label: 'Seconds' },
+            { value: days, label: 'Days', color: 'from-primary to-secondary' },
+            { value: hours, label: 'Hours', color: 'from-secondary to-accent' },
+            { value: minutes, label: 'Minutes', color: 'from-accent to-primary' },
+            { value: seconds, label: 'Seconds', color: 'from-primary to-accent' },
           ].map((item, index) => (
             <motion.div
               key={item.label}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.1 + 0.5 }}
-              className="flex flex-col items-center"
+              initial={{ opacity: 0, scale: 0, rotateY: 180 }}
+              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+              transition={{ 
+                delay: index * 0.15 + 0.5,
+                type: "spring",
+                stiffness: 200
+              }}
+              className="relative group"
             >
-              <div className="glass-effect px-4 md:px-6 py-3 md:py-4 rounded-lg">
-                <span className="text-3xl md:text-5xl font-bold font-orbitron text-primary">
-                  {item.value}
+              {/* Glowing border effect */}
+              <div className={`absolute -inset-0.5 bg-gradient-to-r ${item.color} rounded-2xl blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse`}></div>
+              
+              {/* Timer box */}
+              <div className="relative flex flex-col items-center bg-gray-900/90 backdrop-blur-xl px-3 sm:px-5 md:px-7 py-4 sm:py-5 md:py-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-110 hover:-translate-y-2">
+                {/* Number with animated gradient */}
+                <motion.span 
+                  className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-orbitron bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-1 sm:mb-2`}
+                  animate={{ 
+                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                >
+                  {String(item.value).padStart(2, '0')}
+                </motion.span>
+                
+                {/* Label */}
+                <span className="text-[10px] sm:text-xs md:text-sm uppercase tracking-wider text-gray-400 font-semibold">
+                  {item.label}
                 </span>
+                
+                {/* Decorative dots */}
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full animate-ping"></div>
+                <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-gradient-to-r from-accent to-primary rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
               </div>
-              <span className="text-sm md:text-base text-gray-400 mt-2">
-                {item.label}
-              </span>
             </motion.div>
           ))}
         </div>
@@ -99,14 +134,26 @@ const Hero = () => {
 
           {/* Countdown Timer */}
           <motion.div
-            className="mb-8 sm:mb-12 px-4"
+            className="mb-8 sm:mb-12 px-2 sm:px-4"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8 }}
           >
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6 text-gray-200">
-              Event Starts In
-            </h2>
+            <motion.h2 
+              className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-8"
+              animate={{ 
+                textShadow: [
+                  '0 0 20px rgba(147, 51, 234, 0.5)',
+                  '0 0 30px rgba(59, 130, 246, 0.5)',
+                  '0 0 20px rgba(147, 51, 234, 0.5)',
+                ]
+              }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                ⏰ Event Starts In
+              </span>
+            </motion.h2>
             <Countdown date={eventDate} renderer={renderer} />
           </motion.div>
 
