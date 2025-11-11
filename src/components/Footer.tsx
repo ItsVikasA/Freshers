@@ -21,10 +21,10 @@ const Footer = () => {
   ]
 
   const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, name: 'Facebook', url: '#' },
-    { icon: <Instagram className="w-5 h-5" />, name: 'Instagram', url: '#' },
-    { icon: <Twitter className="w-5 h-5" />, name: 'Twitter', url: '#' },
-    { icon: <Linkedin className="w-5 h-5" />, name: 'LinkedIn', url: '#' },
+    { icon: <Facebook className="w-4 h-4" />, name: 'Facebook', url: '#', color: 'neon-blue' },
+    { icon: <Instagram className="w-4 h-4" />, name: 'Instagram', url: '#', color: 'neon-pink' },
+    { icon: <Twitter className="w-4 h-4" />, name: 'Twitter', url: '#', color: 'neon-blue' },
+    { icon: <Linkedin className="w-4 h-4" />, name: 'LinkedIn', url: '#', color: 'neon-purple' },
   ]
 
   const scrollToTop = () => {
@@ -32,27 +32,30 @@ const Footer = () => {
   }
 
   return (
-    <footer className="relative bg-gradient-to-b from-transparent to-black/50 pt-20 pb-6">
-      <div className="container mx-auto px-4">
+    <footer className="relative bg-gradient-to-b from-transparent to-black/50 pt-12 pb-4 border-t border-neon-blue/20">
+      <div className="container mx-auto px-4 max-w-6xl">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
           {/* Brand Section */}
-          <div>
-            <h3 className="text-xl sm:text-2xl font-bold font-orbitron mb-3 sm:mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              CSE Freshers 2025
+          <div className="col-span-2 lg:col-span-1">
+            <h3 className="text-lg md:text-xl font-bold font-bebas mb-2 tracking-wider">
+              <span className="bg-gradient-to-r from-neon-blue via-neon-pink to-neon-purple bg-clip-text text-transparent">
+                CSE
+              </span>
+              <span className="text-neon-yellow"> 2025</span>
             </h3>
-            <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
-              Celebrating the beginning of an amazing journey in Computer Science Engineering.
+            <p className="text-xs text-gray-400 mb-2 font-space leading-relaxed">
+              Celebrating the beginning of an <span className="text-neon-pink">amazing journey</span> in Computer Science.
             </p>
-            <p className="text-gray-500 text-xs sm:text-sm">
-              Organized by CSE Department Student Committee
+            <p className="text-gray-500 text-[10px] font-space">
+              Organized by CSE Student Committee
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-white">Quick Links</h4>
-            <ul className="space-y-1.5 sm:space-y-2">
+            <h4 className="text-sm md:text-base font-bold mb-2 md:mb-3 font-space text-neon-blue tracking-wide">QUICK LINKS</h4>
+            <ul className="space-y-1">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <ScrollLink
@@ -61,9 +64,9 @@ const Footer = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors cursor-pointer inline-block"
+                    className="text-[10px] md:text-xs text-gray-400 hover:text-neon-blue transition-colors cursor-pointer inline-block font-space"
                   >
-                    {link.name}
+                    → {link.name}
                   </ScrollLink>
                 </li>
               ))}
@@ -72,8 +75,8 @@ const Footer = () => {
 
           {/* Event Links */}
           <div>
-            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-white">Event Info</h4>
-            <ul className="space-y-1.5 sm:space-y-2">
+            <h4 className="text-sm md:text-base font-bold mb-2 md:mb-3 font-space text-neon-pink tracking-wide">EVENT INFO</h4>
+            <ul className="space-y-1">
               {eventLinks.map((link, index) => (
                 <li key={index}>
                   <ScrollLink
@@ -82,9 +85,9 @@ const Footer = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors cursor-pointer inline-block"
+                    className="text-[10px] md:text-xs text-gray-400 hover:text-neon-pink transition-colors cursor-pointer inline-block font-space"
                   >
-                    {link.name}
+                    → {link.name}
                   </ScrollLink>
                 </li>
               ))}
@@ -93,18 +96,18 @@ const Footer = () => {
 
           {/* Contact & Social */}
           <div>
-            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-white">Connect With Us</h4>
-            <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
-              Follow us on social media for updates and announcements
+            <h4 className="text-sm md:text-base font-bold mb-2 md:mb-3 font-space text-neon-purple tracking-wide">CONNECT</h4>
+            <p className="text-gray-400 text-[10px] md:text-xs mb-3 font-space">
+              Follow for <span className="text-neon-pink">updates</span> 📱
             </p>
-            <div className="flex gap-2.5 sm:gap-3">
+            <div className="flex gap-2">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-primary hover:scale-110 transition-all"
+                  className={`w-7 h-7 md:w-8 md:h-8 flex items-center justify-center cyber-card rounded-full border border-${social.color}/30 hover:border-${social.color} text-${social.color} hover:scale-110 transition-all`}
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -115,45 +118,45 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-700 mb-6"></div>
+        <div className="border-t border-neon-blue/20 mb-4"></div>
 
         {/* Bottom Footer */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-2 md:gap-3">
           <div className="text-center sm:text-left">
-            <p className="text-gray-400 text-xs sm:text-sm">
+            <p className="text-gray-400 text-[10px] md:text-xs font-space">
               &copy; {currentYear} CSE Freshers Party. All rights reserved.
             </p>
-            <p className="text-gray-400 text-xs sm:text-sm flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2 mt-1">
-              Made with <Heart className="text-red-500 w-3 h-3 sm:w-4 sm:h-4 fill-current" /> by CSE Students
+            <p className="text-gray-400 text-[10px] md:text-xs flex items-center justify-center sm:justify-start gap-1 mt-0.5 font-space">
+              Made with <Heart className="text-neon-pink w-2.5 h-2.5 md:w-3 md:h-3 fill-current animate-pulse" /> by <span className="text-neon-blue">CSE Students</span>
             </p>
           </div>
 
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-2">
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1.5 sm:gap-2 text-gray-400 hover:text-primary transition-colors"
+              className="flex items-center gap-1.5 text-gray-400 hover:text-neon-blue transition-colors group"
               aria-label="Scroll to top"
             >
-              <span className="text-xs sm:text-sm">Back to Top</span>
-              <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-white/10 rounded-full hover:bg-primary transition-colors">
-                <ArrowUp className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <span className="text-[10px] md:text-xs font-space">BACK TO TOP</span>
+              <div className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center cyber-card rounded-full border border-neon-blue/30 group-hover:border-neon-blue transition-all group-hover:scale-110">
+                <ArrowUp className="w-3 h-3 md:w-3.5 md:h-3.5 text-neon-blue" />
               </div>
             </button>
           </div>
         </div>
 
         {/* Additional Links */}
-        <div className="mt-6 text-center">
-          <p className="text-gray-500 text-xs">
-            <a href="#" className="hover:text-primary transition-colors">
+        <div className="mt-4 text-center">
+          <p className="text-gray-500 text-[10px] font-space">
+            <a href="#" className="hover:text-neon-blue transition-colors">
               Privacy Policy
             </a>
-            {' | '}
-            <a href="#" className="hover:text-primary transition-colors">
+            <span className="text-neon-blue/30"> | </span>
+            <a href="#" className="hover:text-neon-pink transition-colors">
               Terms & Conditions
             </a>
-            {' | '}
-            <a href="#" className="hover:text-primary transition-colors">
+            <span className="text-neon-pink/30"> | </span>
+            <a href="#" className="hover:text-neon-purple transition-colors">
               Code of Conduct
             </a>
           </p>
