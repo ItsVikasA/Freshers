@@ -76,30 +76,30 @@ const Gallery = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center p-2 sm:p-4"
             onClick={() => setSelectedImage(null)}
           >
             <button
-              className="absolute top-4 right-4 text-white text-3xl hover:text-accent transition-colors z-10"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white text-2xl sm:text-3xl hover:text-accent transition-colors z-10 bg-black/50 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
               onClick={() => setSelectedImage(null)}
               aria-label="Close"
             >
               <FaTimes />
             </button>
-            <div className="w-full max-w-7xl mx-auto px-4">
-              <div className="relative w-full" style={{ height: '85vh' }}>
+            <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 flex-1 flex flex-col items-center justify-center">
+              <div className="relative w-full h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[85vh]">
                 <Image
                   src={images[selectedImage].src}
                   alt={images[selectedImage].alt}
                   fill
                   className="object-contain"
-                  sizes="95vw"
+                  sizes="(max-width: 640px) 95vw, (max-width: 1024px) 90vw, 85vw"
                   priority
                 />
               </div>
-              <div className="mt-6 text-center flex justify-center gap-4">
+              <div className="mt-4 sm:mt-6 text-center flex justify-center gap-2 sm:gap-4 w-full">
                 <button
-                  className="px-6 py-3 bg-primary rounded-lg hover:bg-primary/80 transition-colors font-semibold text-white"
+                  className="px-4 py-2 sm:px-6 sm:py-3 bg-primary rounded-lg hover:bg-primary/80 transition-colors font-semibold text-white text-sm sm:text-base flex-1 max-w-[150px]"
                   onClick={(e) => {
                     e.stopPropagation()
                     setSelectedImage(selectedImage > 0 ? selectedImage - 1 : images.length - 1)
@@ -108,7 +108,7 @@ const Gallery = () => {
                   Previous
                 </button>
                 <button
-                  className="px-6 py-3 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors font-semibold text-white"
+                  className="px-4 py-2 sm:px-6 sm:py-3 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors font-semibold text-white text-sm sm:text-base flex-1 max-w-[150px]"
                   onClick={(e) => {
                     e.stopPropagation()
                     setSelectedImage(selectedImage < images.length - 1 ? selectedImage + 1 : 0)

@@ -56,20 +56,20 @@ const About = () => {
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-              className="glass-effect p-6 rounded-xl text-center hover:scale-105 transition-transform cursor-pointer group"
+              className="glass-effect p-5 sm:p-6 rounded-xl text-center hover:scale-105 transition-transform cursor-pointer group"
             >
               <div className="text-primary group-hover:text-accent transition-colors mb-4 flex justify-center">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{feature.title}</h3>
+              <p className="text-sm sm:text-base text-gray-400">{feature.description}</p>
             </motion.div>
           ))}
         </div>
@@ -79,19 +79,19 @@ const About = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-16 glass-effect p-8 rounded-xl max-w-4xl mx-auto"
+          className="mt-12 sm:mt-16 glass-effect p-5 sm:p-8 rounded-xl max-w-4xl mx-auto"
         >
-          <h3 className="text-2xl font-bold mb-4 text-primary">
+          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-primary">
             Message from the Organizing Committee
           </h3>
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
             &quot;Welcome home, freshers! 🎊 This isn&apos;t just another party - it&apos;s your first big memory in CSE. 
             We&apos;ve got amazing performances lined up, fun games with awesome prizes, great food, and most importantly, 
             a chance for you to meet the incredible people you&apos;ll spend the next few years with. 
             Don&apos;t worry about feeling nervous - everyone&apos;s here to have fun and make you feel at home. 
             Can&apos;t wait to see you all there!&quot;
           </p>
-          <p className="text-right text-accent font-semibold mt-4">
+          <p className="text-right text-accent font-semibold mt-3 sm:mt-4 text-sm sm:text-base">
             - Your CSE Seniors & Organizing Committee ❤️
           </p>
         </motion.div>

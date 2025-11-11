@@ -64,7 +64,7 @@ const Contact = () => {
         </motion.div>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {contactInfo.map((contact, index) => (
             <motion.a
               key={index}
@@ -72,32 +72,32 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-effect p-6 rounded-xl text-center hover:scale-105 transition-transform group"
+              className="glass-effect p-5 sm:p-6 rounded-xl text-center hover:scale-105 transition-transform group"
             >
-              <div className="text-primary group-hover:text-accent transition-colors mb-4 flex justify-center">
+              <div className="text-primary group-hover:text-accent transition-colors mb-3 sm:mb-4 flex justify-center">
                 {contact.icon}
               </div>
-              <h3 className="text-xl font-bold mb-2">{contact.title}</h3>
-              <p className="text-gray-300">{contact.info}</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">{contact.title}</h3>
+              <p className="text-sm sm:text-base text-gray-300">{contact.info}</p>
             </motion.a>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {/* Organizing Committee */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="glass-effect p-8 rounded-xl"
+            className="glass-effect p-5 sm:p-8 rounded-xl"
           >
-            <h3 className="text-2xl font-bold mb-6 text-accent">Organizing Committee</h3>
-            <div className="space-y-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-accent">Organizing Committee</h3>
+            <div className="space-y-3 sm:space-y-4">
               {organizers.map((organizer, index) => (
-                <div key={index} className="border-l-4 border-primary pl-4">
-                  <h4 className="font-bold text-white">{organizer.name}</h4>
-                  <p className="text-gray-400 text-sm">{organizer.role}</p>
-                  <p className="text-gray-300 text-sm">{organizer.phone}</p>
+                <div key={index} className="border-l-4 border-primary pl-3 sm:pl-4">
+                  <h4 className="font-bold text-white text-sm sm:text-base">{organizer.name}</h4>
+                  <p className="text-gray-400 text-xs sm:text-sm">{organizer.role}</p>
+                  <p className="text-gray-300 text-xs sm:text-sm">{organizer.phone}</p>
                 </div>
               ))}
             </div>
@@ -108,20 +108,20 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="glass-effect p-8 rounded-xl"
+            className="glass-effect p-5 sm:p-8 rounded-xl"
           >
-            <h3 className="text-2xl font-bold mb-6 text-accent">Follow Us</h3>
-            <p className="text-gray-400 mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-accent">Follow Us</h3>
+            <p className="text-sm sm:text-base text-gray-400 mb-4">
               Follow us for event updates, behind-the-scenes, and more! Drop a DM if you have any questions 💬
             </p>
-            <div className="flex gap-4 mb-8">
+            <div className="flex gap-3 sm:gap-4 mb-6 sm:mb-8">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center bg-white/10 rounded-full hover:bg-primary hover:scale-110 transition-all text-2xl"
+                  className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white/10 rounded-full hover:bg-primary hover:scale-110 transition-all"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -129,11 +129,11 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="border-t border-gray-600 pt-6">
-              <h4 className="font-bold mb-4">Office Hours</h4>
-              <p className="text-gray-300 text-sm">Monday - Friday: 9:00 AM - 5:00 PM</p>
-              <p className="text-gray-300 text-sm">Saturday: 10:00 AM - 2:00 PM</p>
-              <p className="text-gray-300 text-sm">Sunday: Closed</p>
+            <div className="border-t border-gray-600 pt-4 sm:pt-6">
+              <h4 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Office Hours</h4>
+              <p className="text-gray-300 text-xs sm:text-sm">Monday - Friday: 9:00 AM - 5:00 PM</p>
+              <p className="text-gray-300 text-xs sm:text-sm">Saturday: 10:00 AM - 2:00 PM</p>
+              <p className="text-gray-300 text-xs sm:text-sm">Sunday: Closed</p>
             </div>
           </motion.div>
         </div>

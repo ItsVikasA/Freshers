@@ -57,23 +57,23 @@ const EventDetails = () => {
         </motion.div>
 
         {/* Details Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {details.map((detail, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-effect p-6 rounded-xl hover:scale-105 transition-transform cursor-pointer group"
+              className="glass-effect p-5 sm:p-6 rounded-xl hover:scale-105 transition-transform cursor-pointer group"
             >
-              <div className="text-primary group-hover:text-accent transition-colors mb-4 flex justify-center">
+              <div className="text-primary group-hover:text-accent transition-colors mb-3 sm:mb-4 flex justify-center">
                 {detail.icon}
               </div>
-              <h3 className="text-xl font-bold mb-2 text-center">{detail.title}</h3>
-              <p className="text-2xl font-bold text-primary mb-2 text-center">
+              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2 text-center">{detail.title}</h3>
+              <p className="text-xl sm:text-2xl font-bold text-primary mb-1.5 sm:mb-2 text-center">
                 {detail.info}
               </p>
-              <p className="text-gray-400 text-center text-sm">{detail.description}</p>
+              <p className="text-gray-400 text-center text-xs sm:text-sm">{detail.description}</p>
             </motion.div>
           ))}
         </div>
@@ -83,33 +83,33 @@ const EventDetails = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="glass-effect p-8 rounded-xl max-w-4xl mx-auto"
+          className="glass-effect p-5 sm:p-8 rounded-xl max-w-4xl mx-auto"
         >
-          <h3 className="text-2xl font-bold mb-6 text-accent text-center">Important Information</h3>
-          <ul className="space-y-4 text-gray-300">
-            <li className="flex items-start gap-3">
-              <Ticket className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-              <span><strong>FREE Entry</strong> - Just bring your college ID card</span>
+          <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-accent text-center">Important Information</h3>
+          <ul className="space-y-3 sm:space-y-4 text-gray-300">
+            <li className="flex items-start gap-2 sm:gap-3">
+              <Ticket className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+              <span className="text-sm sm:text-base"><strong>FREE Entry</strong> - Just bring your college ID card</span>
             </li>
-            <li className="flex items-start gap-3">
-              <UtensilsCrossed className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-              <span><strong>Food & Refreshments</strong> included - Come hungry!</span>
+            <li className="flex items-start gap-2 sm:gap-3">
+              <UtensilsCrossed className="w-4 h-4 sm:w-5 sm:h-5 text-accent mt-0.5 flex-shrink-0" />
+              <span className="text-sm sm:text-base"><strong>Food & Refreshments</strong> included - Come hungry!</span>
             </li>
-            <li className="flex items-start gap-3">
-              <Camera className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-              <span><strong>Professional Photography</strong> - Capture your memories</span>
+            <li className="flex items-start gap-2 sm:gap-3">
+              <Camera className="w-4 h-4 sm:w-5 sm:h-5 text-secondary mt-0.5 flex-shrink-0" />
+              <span className="text-sm sm:text-base"><strong>Professional Photography</strong> - Capture your memories</span>
             </li>
-            <li className="flex items-start gap-3">
-              <Gift className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-              <span><strong>Prizes & Surprises</strong> - Participate in games to win</span>
+            <li className="flex items-start gap-2 sm:gap-3">
+              <Gift className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+              <span className="text-sm sm:text-base"><strong>Prizes & Surprises</strong> - Participate in games to win</span>
             </li>
-            <li className="flex items-start gap-3">
-              <Sparkles className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-              <span><strong>Dress to Impress</strong> - Smart casual or ethnic wear</span>
+            <li className="flex items-start gap-2 sm:gap-3">
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-accent mt-0.5 flex-shrink-0" />
+              <span className="text-sm sm:text-base"><strong>Dress to Impress</strong> - Smart casual or ethnic wear</span>
             </li>
-            <li className="flex items-start gap-3">
-              <MessageCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-              <span><strong>Questions?</strong> Contact the organizing committee below</span>
+            <li className="flex items-start gap-2 sm:gap-3">
+              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-secondary mt-0.5 flex-shrink-0" />
+              <span className="text-sm sm:text-base"><strong>Questions?</strong> Contact the organizing committee below</span>
             </li>
           </ul>
         </motion.div>
@@ -119,10 +119,10 @@ const EventDetails = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-12 glass-effect p-4 rounded-xl max-w-4xl mx-auto overflow-hidden"
+          className="mt-8 sm:mt-12 glass-effect p-3 sm:p-4 rounded-xl max-w-4xl mx-auto overflow-hidden"
         >
-          <h3 className="text-2xl font-bold mb-4 text-center text-primary">Location</h3>
-          <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] rounded-lg overflow-hidden">
+          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-center text-primary">Location</h3>
+          <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] rounded-lg overflow-hidden">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.700573775731!2d75.28514787514162!3d16.33823668438089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc7403a4c215e2f%3A0xfb587de72521ec79!2sBiluru%20Gurubasav%20Mahaswamiji%20Institute%20of%20Technology%2C%20Mudhol!5e0!3m2!1sen!2sin!4v1762872033744!5m2!1sen!2sin" 
               width="100%" 
@@ -134,7 +134,7 @@ const EventDetails = () => {
               title="BGMIT College Location"
             />
           </div>
-          <p className="text-center text-gray-400 mt-4 text-sm">
+          <p className="text-center text-gray-400 mt-3 sm:mt-4 text-xs sm:text-sm">
             Biluru Gurubasav Mahaswamiji Institute of Technology, Mudhol
           </p>
         </motion.div>

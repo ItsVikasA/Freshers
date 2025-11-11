@@ -69,24 +69,24 @@ const Highlights = () => {
         </motion.div>
 
         {/* Highlights Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {highlights.map((highlight, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-effect p-6 rounded-xl hover:scale-105 transition-transform group"
+              className="glass-effect p-5 sm:p-6 rounded-xl hover:scale-105 transition-transform group"
             >
               <div className="text-primary group-hover:text-accent transition-colors mb-4">
                 {highlight.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-3">{highlight.title}</h3>
-              <p className="text-gray-400 mb-4">{highlight.description}</p>
-              <ul className="space-y-2">
+              <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">{highlight.title}</h3>
+              <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">{highlight.description}</p>
+              <ul className="space-y-1.5 sm:space-y-2">
                 {highlight.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-300 text-sm">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                  <li key={idx} className="flex items-center text-gray-300 text-xs sm:text-sm">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full mr-2 sm:mr-3 flex-shrink-0"></span>
                     {feature}
                   </li>
                 ))}
@@ -100,10 +100,10 @@ const Highlights = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-16 glass-effect p-8 rounded-xl max-w-4xl mx-auto text-center"
+          className="mt-12 sm:mt-16 glass-effect p-5 sm:p-8 rounded-xl max-w-4xl mx-auto text-center"
         >
-          <h3 className="text-2xl font-bold mb-4 text-accent">Special Attractions</h3>
-          <p className="text-gray-300 leading-relaxed">
+          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-accent">Special Attractions</h3>
+          <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
             🎉 <strong>And that&apos;s not all!</strong> We have special guest performances, surprise acts, 
             amazing prizes for game winners, and a lot more planned. The best part? You&apos;ll get to know 
             your amazing batchmates and friendly seniors. This is where your college memories begin! 
