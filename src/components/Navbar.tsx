@@ -30,22 +30,27 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass-effect shadow-lg py-3' : 'bg-transparent py-5'
+        scrolled 
+          ? 'cyber-card border-b-2 border-neon-blue/30 shadow-neon-blue py-2 sm:py-3' 
+          : 'bg-gradient-to-b from-black/50 to-transparent backdrop-blur-sm py-4 sm:py-5'
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-bold font-orbitron bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
+            className="text-xl sm:text-2xl md:text-3xl font-bold font-bebas tracking-wider"
           >
-            CSE Freshers 2025
+            <span className="bg-gradient-to-r from-neon-blue via-neon-pink to-neon-purple bg-clip-text text-transparent">
+              CSE
+            </span>
+            <span className="text-neon-yellow ml-1">2025</span>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -59,52 +64,88 @@ const Navbar = () => {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="text-gray-300 hover:text-primary transition-colors cursor-pointer font-medium"
-                  activeClass="text-primary"
+                  className="relative text-gray-300 hover:text-neon-blue transition-all cursor-pointer font-space font-medium text-sm xl:text-base uppercase tracking-wide group"
+                  activeClass="text-neon-blue"
                 >
                   {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-pink group-hover:w-full transition-all duration-300"></span>
                 </ScrollLink>
               </motion.div>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white text-2xl z-50"
+          <motion.button
+            className="lg:hidden text-white z-50 p-2 rounded-lg cyber-card border-2 border-neon-blue/50 hover:border-neon-pink/50 transition-all"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
+            whileTap={{ scale: 0.9 }}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {isOpen ? <X size={24} className="text-neon-pink" /> : <Menu size={24} className="text-neon-blue" />}
+          </motion.button>
         </div>
 
         {/* Mobile Navigation */}
         <motion.div
           initial={{ opacity: 0, x: '100%' }}
           animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : '100%' }}
-          transition={{ type: 'tween' }}
-          className={`fixed top-0 right-0 bottom-0 w-64 glass-effect md:hidden ${
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          className={`fixed top-0 right-0 bottom-0 w-72 sm:w-80 cyber-card border-l-2 border-neon-pink/50 shadow-neon-pink lg:hidden ${
             isOpen ? 'pointer-events-auto' : 'pointer-events-none'
           }`}
         >
-          <div className="flex flex-col items-start space-y-6 p-8 mt-20">
-            {navItems.map((item) => (
-              <ScrollLink
+          {/* Mobile menu header */}
+          <div className="p-6 border-b border-neon-blue/30">
+            <h3 className="text-2xl font-bebas tracking-wider">
+              <span className="bg-gradient-to-r from-neon-blue to-neon-pink bg-clip-text text-transparent">
+                MENU
+              </span>
+            </h3>
+          </div>
+          
+          {/* Mobile menu items */}
+          <div className="flex flex-col space-y-2 p-6">
+            {navItems.map((item, index) => (
+              <motion.div
                 key={item.name}
-                to={item.to}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="text-gray-300 hover:text-primary transition-colors cursor-pointer text-lg font-medium"
-                activeClass="text-primary"
-                onClick={() => setIsOpen(false)}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : 20 }}
+                transition={{ delay: index * 0.05 }}
               >
-                {item.name}
-              </ScrollLink>
+                <ScrollLink
+                  to={item.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="block text-gray-300 hover:text-neon-blue transition-all cursor-pointer text-lg font-space font-medium uppercase tracking-wide py-3 px-4 rounded-lg hover:bg-neon-blue/10 border-l-2 border-transparent hover:border-neon-blue"
+                  activeClass="text-neon-pink border-neon-pink bg-neon-pink/10"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </ScrollLink>
+              </motion.div>
             ))}
           </div>
+          
+          {/* Mobile menu footer */}
+          <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-neon-purple/30">
+            <p className="text-center text-sm text-gray-400 font-space">
+              <span className="text-neon-yellow">CSE</span> Freshers Party 2025
+            </p>
+          </div>
         </motion.div>
+
+        {/* Mobile backdrop overlay */}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm lg:hidden z-40"
+            onClick={() => setIsOpen(false)}
+          />
+        )}
       </div>
     </nav>
   )
