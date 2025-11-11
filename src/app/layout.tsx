@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter, Orbitron } from 'next/font/google'
+import { Space_Grotesk, Bebas_Neue, Poppins } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const orbitron = Orbitron({ subsets: ['latin'], variable: '--font-orbitron' })
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' })
+const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-bebas' })
+const poppins = Poppins({ weight: ['300', '400', '500', '600', '700'], subsets: ['latin'], variable: '--font-poppins' })
 
 export const metadata: Metadata = {
   title: 'CSE Freshers Party 2025 - Welcome Freshers!',
@@ -33,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} ${orbitron.variable} font-sans antialiased`}>
+      <body className={`${poppins.variable} ${bebasNeue.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
