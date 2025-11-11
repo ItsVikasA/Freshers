@@ -39,9 +39,8 @@ const Contact = () => {
   ]
 
   const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, name: 'Facebook', url: '#', color: 'neon-blue' },
+    { icon: <Facebook className="w-5 h-5" />, name: 'Facebook', url: 'https://www.facebook.com/p/Cse-Bgmit-100072360492372/', color: 'neon-blue' },
     { icon: <Instagram className="w-5 h-5" />, name: 'Instagram', url: '#', color: 'neon-pink' },
-    { icon: <Twitter className="w-5 h-5" />, name: 'Twitter', url: '#', color: 'neon-blue' },
     { icon: <Linkedin className="w-5 h-5" />, name: 'LinkedIn', url: '#', color: 'neon-purple' },
   ]
 
@@ -138,7 +137,7 @@ const Contact = () => {
             <p className="text-xs md:text-sm text-gray-400 mb-4 font-space">
               Follow for <span className="text-neon-pink">updates</span>, <span className="text-neon-blue">BTS</span>, and more! 💬
             </p>
-            <div className="flex gap-2 md:gap-3 mb-6">
+            <div className="flex gap-2 md:gap-3">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
@@ -152,15 +151,6 @@ const Contact = () => {
                   {social.icon}
                 </motion.a>
               ))}
-            </div>
-
-            <div className="border-t border-neon-pink/20 pt-4">
-              <h4 className="font-bold mb-2 text-xs md:text-sm font-space text-neon-pink/80">OFFICE HOURS</h4>
-              <div className="space-y-1 text-[10px] md:text-xs font-space">
-                <p className="text-gray-300">Mon - Fri: <span className="text-neon-blue">9:00 AM - 5:00 PM</span></p>
-                <p className="text-gray-300">Saturday: <span className="text-neon-blue">10:00 AM - 2:00 PM</span></p>
-                <p className="text-gray-400">Sunday: <span className="text-gray-500">Closed</span></p>
-              </div>
             </div>
           </motion.div>
         </div>
