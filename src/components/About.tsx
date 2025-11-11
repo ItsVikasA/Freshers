@@ -49,8 +49,8 @@ const About = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Welcome to the CSE family! 🎓 This freshers party is your official welcome to an amazing journey ahead. 
-            We've planned an incredible evening where you'll meet your batchmates, connect with seniors, 
-            enjoy amazing performances, play exciting games, and create memories that'll last throughout your college life. 
+            We&apos;ve planned an incredible evening where you&apos;ll meet your batchmates, connect with seniors, 
+            enjoy amazing performances, play exciting games, and create memories that&apos;ll last throughout your college life. 
             Come ready to have fun, make friends, and celebrate the start of your CSE adventure!
           </p>
         </motion.div>
@@ -85,11 +85,11 @@ const About = () => {
             Message from the Organizing Committee
           </h3>
           <p className="text-gray-300 leading-relaxed">
-            "Welcome home, freshers! 🎊 This isn't just another party - it's your first big memory in CSE. 
-            We've got amazing performances lined up, fun games with awesome prizes, great food, and most importantly, 
-            a chance for you to meet the incredible people you'll spend the next few years with. 
-            Don't worry about feeling nervous - everyone's here to have fun and make you feel at home. 
-            Can't wait to see you all there!"
+            &quot;Welcome home, freshers! 🎊 This isn&apos;t just another party - it&apos;s your first big memory in CSE. 
+            We&apos;ve got amazing performances lined up, fun games with awesome prizes, great food, and most importantly, 
+            a chance for you to meet the incredible people you&apos;ll spend the next few years with. 
+            Don&apos;t worry about feeling nervous - everyone&apos;s here to have fun and make you feel at home. 
+            Can&apos;t wait to see you all there!&quot;
           </p>
           <p className="text-right text-accent font-semibold mt-4">
             - Your CSE Seniors & Organizing Committee ❤️

@@ -52,7 +52,7 @@ const EventDetails = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Mark your calendars! Here's everything you need to know about the event.
+            Mark your calendars! Here&apos;s everything you need to know about the event.
           </p>
         </motion.div>
 

@@ -83,7 +83,7 @@ const FAQ = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Got questions? We've got answers!
+            Got questions? We&apos;ve got answers!
           </p>
         </motion.div>
 

@@ -39,7 +39,7 @@ const Gallery = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            See what you're missing! Check out the fun from our previous freshers parties 📸
+            See what you&apos;re missing! Check out the fun from our previous freshers parties 📸
           </p>
         </motion.div>
 

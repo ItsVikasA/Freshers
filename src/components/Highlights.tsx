@@ -64,7 +64,7 @@ const Highlights = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            From amazing performances to exciting games - here's what's waiting for you!
+            From amazing performances to exciting games - here&apos;s what&apos;s waiting for you!
           </p>
         </motion.div>
 
@@ -104,10 +104,10 @@ const Highlights = () => {
         >
           <h3 className="text-2xl font-bold mb-4 text-accent">Special Attractions</h3>
           <p className="text-gray-300 leading-relaxed">
-            🎉 <strong>And that's not all!</strong> We have special guest performances, surprise acts, 
-            amazing prizes for game winners, and a lot more planned. The best part? You'll get to know 
+            🎉 <strong>And that&apos;s not all!</strong> We have special guest performances, surprise acts, 
+            amazing prizes for game winners, and a lot more planned. The best part? You&apos;ll get to know 
             your amazing batchmates and friendly seniors. This is where your college memories begin! 
-            Don't miss out - see you there! 🌟
+            Don&apos;t miss out - see you there! 🌟
           </p>
         </motion.div>
       </div>
