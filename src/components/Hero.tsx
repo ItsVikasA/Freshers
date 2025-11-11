@@ -56,7 +56,7 @@ const Hero = () => {
         >
           {/* Event Title */}
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold font-orbitron mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-orbitron mb-6 px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -65,46 +65,46 @@ const Hero = () => {
               CSE Freshers Party
             </span>
             <br />
-            <span className="text-white text-5xl md:text-6xl">2025</span>
+            <span className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl">2025</span>
           </motion.h1>
 
           {/* Tagline */}
           <motion.p
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
             Join us for an unforgettable evening of fun, music, and memories!
-            <br />
-            All CSE freshers are invited! 🎉
+            <br className="hidden sm:block" />
+            <span className="sm:inline block mt-2 sm:mt-0">All CSE freshers are invited! 🎉</span>
           </motion.p>
 
           {/* Quick Info */}
           <motion.div
-            className="flex flex-wrap gap-6 justify-center mb-12"
+            className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 justify-center mb-8 sm:mb-12 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <div className="flex items-center gap-2 glass-effect px-4 py-2 rounded-full">
-              <Calendar className="text-primary w-5 h-5" />
-              <span className="text-sm md:text-base">November 14, 2025 | 9:00 AM</span>
+            <div className="flex items-center gap-2 glass-effect px-3 sm:px-4 py-2 rounded-full">
+              <Calendar className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm md:text-base">November 14, 2025 | 9:00 AM</span>
             </div>
-            <div className="flex items-center gap-2 glass-effect px-4 py-2 rounded-full">
-              <MapPin className="text-accent w-5 h-5" />
-              <span className="text-sm md:text-base">Auditorium</span>
+            <div className="flex items-center gap-2 glass-effect px-3 sm:px-4 py-2 rounded-full">
+              <MapPin className="text-accent w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm md:text-base">Auditorium</span>
             </div>
           </motion.div>
 
           {/* Countdown Timer */}
           <motion.div
-            className="mb-12"
+            className="mb-8 sm:mb-12 px-4"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8 }}
           >
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-200">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6 text-gray-200">
               Event Starts In
             </h2>
             <Countdown date={eventDate} renderer={renderer} />
