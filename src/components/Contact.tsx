@@ -19,14 +19,14 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      info: '+91 12345 67890',
-      link: 'tel:+911234567890',
+      info: '+91 70190 33666',
+      link: 'tel:+917019033666',
       color: 'neon-pink',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      info: 'CSE Department, Main Building',
+      info: 'BGMIT Auditorium',
       link: '#',
       color: 'neon-purple',
     },
