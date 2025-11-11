@@ -114,21 +114,29 @@ const EventDetails = () => {
           </ul>
         </motion.div>
 
-        {/* Map placeholder - Replace with actual map integration */}
+        {/* Google Maps */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-12 glass-effect p-4 rounded-xl max-w-4xl mx-auto h-96 flex items-center justify-center"
+          className="mt-12 glass-effect p-4 rounded-xl max-w-4xl mx-auto overflow-hidden"
         >
-          <div className="text-center">
-            <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-            <p className="text-gray-400">
-              Map integration will be added here
-              <br />
-              <span className="text-sm">(Google Maps / Leaflet)</span>
-            </p>
+          <h3 className="text-2xl font-bold mb-4 text-center text-primary">Location</h3>
+          <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] rounded-lg overflow-hidden">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.700573775731!2d75.28514787514162!3d16.33823668438089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc7403a4c215e2f%3A0xfb587de72521ec79!2sBiluru%20Gurubasav%20Mahaswamiji%20Institute%20of%20Technology%2C%20Mudhol!5e0!3m2!1sen!2sin!4v1762872033744!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="BGMIT College Location"
+            />
           </div>
+          <p className="text-center text-gray-400 mt-4 text-sm">
+            Biluru Gurubasav Mahaswamiji Institute of Technology, Mudhol
+          </p>
         </motion.div>
       </div>
     </section>

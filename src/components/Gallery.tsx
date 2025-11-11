@@ -10,16 +10,11 @@ const Gallery = () => {
   const isInView = useInView(ref, { once: true })
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
-  // Placeholder images - Replace with actual event photos
+  // Event photos from previous freshers party
   const images = [
-    { id: 1, src: '/gallery/img1.jpg', alt: 'Event moment 1', category: 'Performances' },
-    { id: 2, src: '/gallery/img2.jpg', alt: 'Event moment 2', category: 'Games' },
-    { id: 3, src: '/gallery/img3.jpg', alt: 'Event moment 3', category: 'Food' },
-    { id: 4, src: '/gallery/img4.jpg', alt: 'Event moment 4', category: 'Performances' },
-    { id: 5, src: '/gallery/img5.jpg', alt: 'Event moment 5', category: 'Group Photos' },
-    { id: 6, src: '/gallery/img6.jpg', alt: 'Event moment 6', category: 'Games' },
-    { id: 7, src: '/gallery/img7.jpg', alt: 'Event moment 7', category: 'DJ Night' },
-    { id: 8, src: '/gallery/img8.jpg', alt: 'Event moment 8', category: 'Awards' },
+    { id: 1, src: '/gallery/1.jpg', alt: 'CSE Freshers Event', category: 'Event Highlights' },
+    { id: 2, src: '/gallery/2.jpg', alt: 'CSE Freshers Celebration', category: 'Event Highlights' },
+    { id: 3, src: '/gallery/3.jpg', alt: 'CSE Freshers Moments', category: 'Event Highlights' },
   ]
 
   return (
