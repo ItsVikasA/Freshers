@@ -92,12 +92,12 @@ const Hero = () => {
         >
           {/* Event Title */}
           <motion.h1
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-brillant mb-6 px-6 tracking-wide text-center"
+            className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-brillant mb-6 px-4 sm:px-6 tracking-normal sm:tracking-wide text-center break-words"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent neon-text inline-block" style={{ textShadow: '0 0 50px #22D3EE, 0 0 100px #3B82F6, 0 0 150px #A855F7' }}>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent neon-text inline-block max-w-full" style={{ textShadow: '0 0 50px #22D3EE, 0 0 100px #3B82F6, 0 0 150px #A855F7' }}>
               Navasparsh-2k25
             </span>
           </motion.h1>
