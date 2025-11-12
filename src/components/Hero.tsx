@@ -97,7 +97,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="bg-gradient-to-r from-pink-500 via-pink-400 to-orange-500 bg-clip-text text-transparent neon-text" style={{ textShadow: '0 0 40px #EC4899, 0 0 80px #EC4899, 0 0 120px #FB923C' }}>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent neon-text" style={{ textShadow: '0 0 50px #22D3EE, 0 0 100px #3B82F6, 0 0 150px #A855F7' }}>
               Navasparsha-2k25
             </span>
           </motion.h1>
@@ -204,7 +204,7 @@ const Hero = () => {
 
       {/* Floating neon elements */}
       <motion.div
-        className="absolute top-20 left-10 w-32 h-32 bg-cyan-400/20 rounded-full blur-3xl"
+        className="absolute top-20 left-10 w-32 h-32 bg-cyan-400/30 rounded-full blur-3xl"
         animate={{ 
           y: [0, -30, 0], 
           x: [0, 20, 0],
@@ -213,7 +213,7 @@ const Hero = () => {
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-20 right-10 w-40 h-40 bg-yellow-400/20 rounded-full blur-3xl"
+        className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/30 rounded-full blur-3xl"
         animate={{ 
           y: [0, 30, 0], 
           x: [0, -20, 0],
@@ -222,7 +222,7 @@ const Hero = () => {
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute top-1/2 left-1/4 w-36 h-36 bg-cyan-400/20 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/4 w-36 h-36 bg-blue-500/30 rounded-full blur-3xl"
         animate={{ 
           y: [0, -20, 0], 
           x: [0, 25, 0],
