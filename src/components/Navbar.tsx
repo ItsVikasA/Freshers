@@ -8,11 +8,11 @@ const Navbar = () => {
   const [active, setActive] = useState('hero')
 
   const navItems = [
-    { name: 'Home', to: 'hero', icon: Home, color: 'neon-blue' },
-    { name: 'About', to: 'about', icon: User, color: 'neon-pink' },
-    { name: 'Timeline', to: 'timeline', icon: Calendar, color: 'neon-purple' },
-    { name: 'Gallery', to: 'gallery', icon: Image, color: 'neon-yellow' },
-    { name: 'Contact', to: 'contact', icon: Mail, color: 'neon-blue' },
+    { name: 'Home', to: 'hero', icon: Home, color: 'cyan-400' },
+    { name: 'About', to: 'about', icon: User, color: 'yellow-400' },
+    { name: 'Timeline', to: 'timeline', icon: Calendar, color: 'cyan-400' },
+    { name: 'Gallery', to: 'gallery', icon: Image, color: 'yellow-400' },
+    { name: 'Contact', to: 'contact', icon: Mail, color: 'cyan-400' },
   ]
 
   return (
@@ -23,9 +23,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-1">
-              <span className="text-2xl font-bold font-bebas tracking-wider text-neon-blue">CSE</span>
-              <span className="text-2xl font-bold font-bebas tracking-wider text-neon-yellow">FRESHERS</span>
-              <span className="text-2xl font-bold font-bebas tracking-wider text-neon-pink">2025</span>
+              <span className="text-2xl font-bold font-bebas tracking-wider text-cyan-400">CSE</span>
+              <span className="text-2xl font-bold font-bebas tracking-wider text-yellow-400">FRESHERS</span>
+              <span className="text-2xl font-bold font-bebas tracking-wider text-cyan-400">2025</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -42,7 +42,7 @@ const Navbar = () => {
                     duration={500}
                     onSetActive={() => setActive(item.to)}
                     className={`flex items-center gap-2 cursor-pointer font-space text-sm font-semibold uppercase tracking-wider transition-all ${
-                      active === item.to ? 'text-neon-blue' : 'text-gray-300 hover:text-white'
+                      active === item.to ? 'text-cyan-400' : 'text-gray-300 hover:text-white'
                     }`}
                   >
                     <Icon size={18} strokeWidth={2} />
@@ -56,20 +56,20 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Top Navigation */}
-      <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b-2 border-neon-blue/40 shadow-lg shadow-neon-blue/20">
+      <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b-2 border-cyan-400/40 shadow-lg shadow-cyan-400/20">
         <div className="px-4 py-3.5">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center gap-1.5">
-              <span className="text-xl font-bold font-bebas tracking-wider text-white drop-shadow-[0_0_20px_rgba(0,217,255,1)] brightness-150">CSE</span>
-              <span className="text-xl font-bold font-bebas tracking-wider text-white drop-shadow-[0_0_20px_rgba(255,215,0,1)] brightness-150">FRESHERS</span>
-              <span className="text-xl font-bold font-bebas tracking-wider text-white drop-shadow-[0_0_20px_rgba(255,16,240,1)] brightness-150">2025</span>
+            <div className="flex items-center gap-1">
+              <span className="text-lg font-bold font-bebas tracking-wider text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,1)]">CSE</span>
+              <span className="text-lg font-bold font-bebas tracking-wider text-yellow-400 drop-shadow-[0_0_20px_rgba(251,191,36,1)]">FRESHERS</span>
+              <span className="text-lg font-bold font-bebas tracking-wider text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,1)]">2025</span>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setActive(active === 'menu' ? 'hero' : 'menu')}
-              className="p-2 rounded-lg bg-gray-900 border-2 border-neon-blue text-neon-blue"
+              className="p-2 rounded-lg bg-gray-900 border-2 border-cyan-400 text-cyan-400"
             >
               {active === 'menu' ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@ const Navbar = () => {
 
           {/* Mobile Dropdown Menu */}
           {active === 'menu' && (
-            <div className="mt-3 bg-gray-900 rounded-lg border-2 border-neon-blue/30 overflow-hidden">
+            <div className="mt-3 bg-gray-900 rounded-lg border-2 border-cyan-400/30 overflow-hidden">
               {navItems.map((item, index) => {
                 const Icon = item.icon
                 return (
@@ -101,7 +101,7 @@ const Navbar = () => {
                       index !== navItems.length - 1 ? 'border-b border-gray-800' : ''
                     } hover:bg-gray-800`}
                   >
-                    <Icon size={18} className="text-neon-blue" strokeWidth={2} />
+                    <Icon size={18} className="text-cyan-400" strokeWidth={2} />
                     <span className="text-white font-space text-sm font-semibold uppercase tracking-wider">
                       {item.name}
                     </span>
