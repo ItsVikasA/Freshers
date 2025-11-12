@@ -14,25 +14,25 @@ const Team = () => {
       name: 'Coordinator Name',
       designation: 'Association Coordinator',
       image: '/team/coordinator.jpg',
-      color: 'neon-blue',
+      color: 'cyan-400',
     },
     {
       name: 'Dr. HOD Name',
       designation: 'HOD - CSE Department',
       image: '/team/hod.jpg',
-      color: 'neon-pink',
+      color: 'pink-400',
     },
     {
       name: 'Chief Guest Name',
       designation: 'Chief Guest',
       image: '/team/guest.jpg',
-      color: 'neon-purple',
+      color: 'purple-400',
     },
     {
       name: 'Dr. Principal Name',
       designation: 'Principal',
       image: '/team/principal.jpg',
-      color: 'neon-yellow',
+      color: 'yellow-400',
     },
   ]
 
@@ -47,18 +47,18 @@ const Team = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-bebas mb-3 tracking-wider">
-            <span className="bg-gradient-to-r from-neon-blue via-neon-pink to-neon-purple bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
               OUR TEAM
             </span>
           </h2>
-          <div className="w-20 h-0.5 bg-gradient-to-r from-neon-blue to-neon-pink mx-auto mb-6"></div>
+          <div className="w-20 h-0.5 bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-400 mx-auto mb-6"></div>
           <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed font-space">
-            Meet the <span className="text-neon-blue font-semibold">amazing people</span> making this event possible
+            Meet the <span className="text-cyan-400 font-semibold">amazing people</span> making this event possible
           </p>
         </motion.div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
@@ -68,11 +68,11 @@ const Team = () => {
               className="flex flex-col items-center group cursor-pointer"
             >
               {/* Profile Picture Circle */}
-              <div className={`relative w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mb-4 rounded-full border-4 border-${member.color} shadow-lg shadow-${member.color}/50 overflow-hidden group-hover:scale-110 transition-all duration-300`}>
+              <div className={`relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 mb-3 md:mb-4 rounded-full border-4 border-${member.color} shadow-lg shadow-${member.color}/50 overflow-hidden group-hover:scale-110 transition-all duration-300`}>
                 {/* Placeholder with gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-${member.color}/30 to-gray-900 flex items-center justify-center`}>
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gray-800 border-2 border-white/20 flex items-center justify-center">
-                    <svg className={`w-8 h-8 md:w-10 md:h-10 text-${member.color}`} fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 rounded-full bg-gray-800 border-2 border-white/20 flex items-center justify-center">
+                    <svg className={`w-6 h-6 sm:w-7 sm:h-7 md:w-10 md:h-10 text-${member.color}`} fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -92,12 +92,12 @@ const Team = () => {
               </div>
 
               {/* Name */}
-              <h3 className={`text-base md:text-lg font-bold text-center mb-1 font-space text-${member.color} group-hover:scale-105 transition-transform`}>
+              <h3 className={`text-xs sm:text-sm md:text-base lg:text-lg font-bold text-center mb-1 font-space text-${member.color} group-hover:scale-105 transition-transform`}>
                 {member.name}
               </h3>
 
               {/* Designation */}
-              <p className="text-xs md:text-sm text-gray-400 text-center font-space leading-tight">
+              <p className="text-[10px] sm:text-xs md:text-sm text-gray-400 text-center font-space leading-tight px-1">
                 {member.designation}
               </p>
 
