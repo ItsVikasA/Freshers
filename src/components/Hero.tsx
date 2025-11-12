@@ -97,7 +97,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 bg-clip-text text-transparent neon-text" style={{ textShadow: '0 0 30px #EC4899, 0 0 60px #EC4899, 0 0 90px #EC4899' }}>
+            <span className="bg-gradient-to-r from-pink-500 via-pink-400 to-orange-500 bg-clip-text text-transparent neon-text" style={{ textShadow: '0 0 40px #EC4899, 0 0 80px #EC4899, 0 0 120px #FB923C' }}>
               Navasparsha-2k25
             </span>
           </motion.h1>
