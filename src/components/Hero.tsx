@@ -98,7 +98,7 @@ const Hero = () => {
             transition={{ delay: 0.2 }}
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent neon-text" style={{ textShadow: '0 0 50px #22D3EE, 0 0 100px #3B82F6, 0 0 150px #A855F7' }}>
-              Navasparsha-2k25
+              Navasparsh-2k25
             </span>
           </motion.h1>
 
