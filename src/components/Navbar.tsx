@@ -23,9 +23,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-1">
-              <span className="text-2xl font-bold font-orbitron tracking-wide bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(34,211,238,1)] animate-pulse">Navasparsh</span>
-              <span className="text-2xl font-bold font-orbitron tracking-wide text-violet-400 drop-shadow-[0_0_15px_rgba(167,139,250,1)]">-</span>
-              <span className="text-2xl font-bold font-orbitron tracking-wide bg-gradient-to-r from-purple-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,1)] animate-pulse">2k25</span>
+              <span className="text-2xl font-bold font-zaslia tracking-wide bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(34,211,238,1)] animate-pulse">Navasparsh</span>
+              <span className="text-2xl font-bold font-zaslia tracking-wide text-violet-400 drop-shadow-[0_0_15px_rgba(167,139,250,1)]">-</span>
+              <span className="text-2xl font-bold font-zaslia tracking-wide bg-gradient-to-r from-purple-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,1)] animate-pulse">2k25</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -61,9 +61,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-0.5">
-              <span className="text-sm font-bold font-orbitron tracking-wide bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(34,211,238,1)]">Navasparsh</span>
-              <span className="text-sm font-bold font-orbitron tracking-wide text-violet-400 drop-shadow-[0_0_15px_rgba(167,139,250,1)]">-</span>
-              <span className="text-sm font-bold font-orbitron tracking-wide bg-gradient-to-r from-purple-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,1)]">2k25</span>
+              <span className="text-sm font-bold font-zaslia tracking-wide bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(34,211,238,1)]">Navasparsh</span>
+              <span className="text-sm font-bold font-zaslia tracking-wide text-violet-400 drop-shadow-[0_0_15px_rgba(167,139,250,1)]">-</span>
+              <span className="text-sm font-bold font-zaslia tracking-wide bg-gradient-to-r from-purple-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,1)]">2k25</span>
             </div>
 
             {/* Mobile Menu Button */}

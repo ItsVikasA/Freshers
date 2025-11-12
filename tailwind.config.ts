@@ -13,6 +13,8 @@ const config: Config = {
         sans: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
         bebas: ['var(--font-bebas)', 'cursive'],
         space: ['var(--font-space)', 'monospace'],
+        zaslia: ['var(--font-zaslia)', 'cursive'],
+        brillant: ['var(--font-brillant)', 'cursive'],
       },
       colors: {
         primary: '#00D9FF',

@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk, Bebas_Neue, Poppins } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' })
 const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-bebas' })
 const poppins = Poppins({ weight: ['300', '400', '500', '600', '700'], subsets: ['latin'], variable: '--font-poppins' })
+const zaslia = localFont({ src: '../../public/fonts/Zaslia.otf', variable: '--font-zaslia' })
+const brillant = localFont({ src: '../../public/fonts/brillant.otf', variable: '--font-brillant' })
 
 export const metadata: Metadata = {
   title: 'CSE Freshers Party 2025 - Welcome Freshers!',
@@ -34,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${poppins.variable} ${bebasNeue.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+      <body className={`${poppins.variable} ${bebasNeue.variable} ${spaceGrotesk.variable} ${zaslia.variable} ${brillant.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

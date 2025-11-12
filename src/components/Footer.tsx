@@ -22,9 +22,9 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: <Facebook className="w-4 h-4" />, name: 'Facebook', url: '#', color: 'neon-blue' },
-    { icon: <Instagram className="w-4 h-4" />, name: 'Instagram', url: '#', color: 'neon-pink' },
+    { icon: <Instagram className="w-4 h-4" />, name: 'Instagram', url: 'https://www.instagram.com/bgmit_souls_', color: 'neon-pink' },
     { icon: <Twitter className="w-4 h-4" />, name: 'Twitter', url: '#', color: 'neon-blue' },
-    { icon: <Linkedin className="w-4 h-4" />, name: 'LinkedIn', url: '#', color: 'neon-purple' },
+    { icon: <Linkedin className="w-4 h-4" />, name: 'LinkedIn', url: 'https://www.linkedin.com/in/vikas028', color: 'neon-purple' },
   ]
 
   const scrollToTop = () => {

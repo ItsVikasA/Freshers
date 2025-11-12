@@ -49,7 +49,7 @@ const Hero = () => {
               <div className="relative flex flex-col items-center bg-gray-900 px-3 sm:px-5 md:px-7 py-4 sm:py-5 md:py-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-110 hover:-translate-y-2">
                 {/* Number with animated gradient */}
                 <motion.span 
-                  className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-orbitron bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-1 sm:mb-2`}
+                  className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-zaslia bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-1 sm:mb-2`}
                   animate={{ 
                     backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                   }}
@@ -92,7 +92,7 @@ const Hero = () => {
         >
           {/* Event Title */}
           <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-orbitron mb-6 px-4 tracking-wide"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-brillant mb-6 px-4 tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
