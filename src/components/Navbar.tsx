@@ -22,10 +22,10 @@ const Navbar = () => {
         <div className="container mx-auto px-6 py-3.5">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center gap-1">
-              <span className="text-2xl font-bold font-bebas tracking-wider text-cyan-400">NavaSparska</span>
-              <span className="text-2xl font-bold font-bebas tracking-wider text-yellow-400">-</span>
-              <span className="text-2xl font-bold font-bebas tracking-wider text-cyan-400">2K25</span>
+            <div className="flex items-center gap-0.5">
+              <span className="text-xl md:text-2xl font-bold font-bebas tracking-wider text-cyan-400">Navasparsha</span>
+              <span className="text-xl md:text-2xl font-bold font-bebas tracking-wider text-yellow-400">-</span>
+              <span className="text-xl md:text-2xl font-bold font-bebas tracking-wider text-cyan-400">2k25</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -61,9 +61,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-0.5">
-              <span className="text-base font-bold font-bebas tracking-wider text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,1)]">NavaSparska</span>
-              <span className="text-base font-bold font-bebas tracking-wider text-yellow-400 drop-shadow-[0_0_20px_rgba(251,191,36,1)]">-</span>
-              <span className="text-base font-bold font-bebas tracking-wider text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,1)]">2K25</span>
+              <span className="text-sm font-bold font-orbitron tracking-wide bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(236,72,153,0.8)]">Navasparsha</span>
+              <span className="text-sm font-bold font-orbitron tracking-wide text-orange-400 drop-shadow-[0_0_20px_rgba(251,146,60,1)]">-</span>
+              <span className="text-sm font-bold font-orbitron tracking-wide bg-gradient-to-r from-orange-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(251,191,36,0.8)]">2k25</span>
             </div>
 
             {/* Mobile Menu Button */}

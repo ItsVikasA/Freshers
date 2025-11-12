@@ -92,13 +92,13 @@ const Hero = () => {
         >
           {/* Event Title */}
           <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-bebas mb-6 px-4 tracking-wider"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-orbitron mb-6 px-4 tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="text-yellow-400 neon-text" style={{ textShadow: '0 0 30px #FBBF24, 0 0 60px #FBBF24, 0 0 90px #FBBF24' }}>
-              NavaSparska
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 bg-clip-text text-transparent neon-text" style={{ textShadow: '0 0 30px #EC4899, 0 0 60px #EC4899, 0 0 90px #EC4899' }}>
+              Navasparsha-2k25
             </span>
           </motion.h1>
 
