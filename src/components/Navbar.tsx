@@ -12,7 +12,6 @@ const Navbar = () => {
     { name: 'About', to: 'about', icon: User, color: 'yellow-400' },
     { name: 'Timeline', to: 'timeline', icon: Calendar, color: 'cyan-400' },
     { name: 'Gallery', to: 'gallery', icon: Image, color: 'yellow-400' },
-    { name: 'Contact', to: 'contact', icon: Mail, color: 'cyan-400' },
   ]
 
   return (

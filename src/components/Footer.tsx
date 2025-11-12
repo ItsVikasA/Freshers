@@ -17,7 +17,6 @@ const Footer = () => {
     { name: 'Timeline', to: 'timeline' },
     { name: 'Highlights', to: 'highlights' },
     { name: 'Gallery', to: 'gallery' },
-    { name: 'Contact', to: 'contact' },
   ]
 
   const socialLinks = [
@@ -35,7 +34,7 @@ const Footer = () => {
     <footer className="relative bg-gray-900 pt-12 pb-4 border-t border-neon-blue/20">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6">
           {/* Brand Section */}
           <div className="col-span-2 lg:col-span-1">
             <h3 className="text-lg md:text-xl font-bold font-bebas mb-2 tracking-wider">
@@ -92,28 +91,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Contact & Social */}
-          <div>
-            <h4 className="text-sm md:text-base font-bold mb-2 md:mb-3 font-space text-neon-purple tracking-wide">CONNECT</h4>
-            <p className="text-gray-400 text-[10px] md:text-xs mb-3 font-space">
-              Follow for <span className="text-neon-pink">updates</span> 📱
-            </p>
-            <div className="flex gap-2">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-7 h-7 md:w-8 md:h-8 flex items-center justify-center cyber-card rounded-full border border-${social.color}/30 hover:border-${social.color} text-${social.color} hover:scale-110 transition-all`}
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
 
