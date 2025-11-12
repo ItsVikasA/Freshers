@@ -23,9 +23,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-1">
-              <span className="text-2xl font-bold font-bebas tracking-wider text-cyan-400">CSE</span>
-              <span className="text-2xl font-bold font-bebas tracking-wider text-yellow-400">FRESHERS</span>
-              <span className="text-2xl font-bold font-bebas tracking-wider text-cyan-400">2025</span>
+              <span className="text-2xl font-bold font-bebas tracking-wider text-cyan-400">NavaSparska</span>
+              <span className="text-2xl font-bold font-bebas tracking-wider text-yellow-400">-</span>
+              <span className="text-2xl font-bold font-bebas tracking-wider text-cyan-400">2K25</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -60,10 +60,10 @@ const Navbar = () => {
         <div className="px-4 py-3.5">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center gap-1">
-              <span className="text-lg font-bold font-bebas tracking-wider text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,1)]">CSE</span>
-              <span className="text-lg font-bold font-bebas tracking-wider text-yellow-400 drop-shadow-[0_0_20px_rgba(251,191,36,1)]">FRESHERS</span>
-              <span className="text-lg font-bold font-bebas tracking-wider text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,1)]">2025</span>
+            <div className="flex items-center gap-0.5">
+              <span className="text-base font-bold font-bebas tracking-wider text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,1)]">NavaSparska</span>
+              <span className="text-base font-bold font-bebas tracking-wider text-yellow-400 drop-shadow-[0_0_20px_rgba(251,191,36,1)]">-</span>
+              <span className="text-base font-bold font-bebas tracking-wider text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,1)]">2K25</span>
             </div>
 
             {/* Mobile Menu Button */}

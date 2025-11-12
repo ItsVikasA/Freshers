@@ -16,7 +16,7 @@ const Invitation = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-2xl mx-auto"
         >
           {/* Invitation Card */}
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-500 group">

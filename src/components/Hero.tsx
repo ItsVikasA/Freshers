@@ -92,17 +92,13 @@ const Hero = () => {
         >
           {/* Event Title */}
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-bebas mb-6 px-4 tracking-wider"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-bebas mb-6 px-4 tracking-wider"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="text-cyan-400 neon-text" style={{ textShadow: '0 0 30px #22D3EE, 0 0 60px #22D3EE, 0 0 90px #22D3EE' }}>
-              CSE FRESHERS
-            </span>
-            <br />
-            <span className="text-yellow-400 text-5xl sm:text-6xl md:text-7xl lg:text-8xl neon-text" style={{ textShadow: '0 0 30px #FBBF24, 0 0 60px #FBBF24, 0 0 90px #FBBF24' }}>
-              PARTY 2025
+            <span className="text-yellow-400 neon-text" style={{ textShadow: '0 0 30px #FBBF24, 0 0 60px #FBBF24, 0 0 90px #FBBF24' }}>
+              NavaSparska
             </span>
           </motion.h1>
 
