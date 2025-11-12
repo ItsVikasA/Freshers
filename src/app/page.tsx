@@ -2,6 +2,7 @@
 
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import Invitation from '@/components/Invitation'
 import About from '@/components/About'
 import EventDetails from '@/components/EventDetails'
 import Timeline from '@/components/Timeline'
@@ -18,6 +19,7 @@ export default function Home() {
       <ParticleBackground />
       <Navbar />
       <Hero />
+      <Invitation />
       <About />
       <Team />
       <EventDetails />
