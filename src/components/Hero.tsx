@@ -7,7 +7,22 @@ import { Calendar, MapPin } from 'lucide-react'
 
 const Hero = () => {
   // Event date - November 14, 2025 at 10:00 AM (Fixed date)
-const eventDate = new Date('2025-11-14T10:00:00+05:30')
+ const eventDate = new Date('2025-11-14T10:00:00+05:30')
+
+  // Debug logs (will run only on client)
+  if (typeof window !== "undefined") {
+    console.log("-------- DEBUG (Hero.tsx) --------")
+    console.log("Browser Timezone:", Intl.DateTimeFormat().resolvedOptions().timeZone)
+    console.log("Local Time Now:", new Date().toString())
+    console.log("Parsed Event Date:", eventDate.toString())
+    console.log("Parsed Event Date (ISO):", eventDate.toISOString())
+
+    const diff = eventDate.getTime() - Date.now()
+    const diffHours = diff / 1000 / 60 / 60
+    console.log("Hours until event:", diffHours)
+
+    console.log("----------------------------------")
+  }
 
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
     if (completed) {
