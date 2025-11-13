@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Invitation from '@/components/Invitation'
 import About from '@/components/About'
+import Team from '@/components/Team'
 import EventDetails from '@/components/EventDetails'
 import Timeline from '@/components/Timeline'
 import Highlights from '@/components/Highlights'
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <Invitation />
       <About />
+      <Team />
       <EventDetails />
       <Timeline />
       <Highlights />
