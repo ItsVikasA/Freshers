@@ -6,8 +6,8 @@ import { Link as ScrollLink } from 'react-scroll'
 import { Calendar, MapPin } from 'lucide-react'
 
 const Hero = () => {
-  // Event date - November 14, 2025 at 9:00 AM
-  const eventDate = process.env.NEXT_PUBLIC_EVENT_DATE || '2025-11-14T09:00:00'
+  // Event date - November 14, 2025 at 10:00 AM
+  const eventDate = process.env.NEXT_PUBLIC_EVENT_DATE || '2025-11-14T10:00:00'
 
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
     if (completed) {
@@ -130,7 +130,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(34,211,238,0.5)' }}
             >
               <Calendar className="text-cyan-400 w-5 h-5 sm:w-6 sm:h-6" />
-              <span className="text-xs sm:text-sm md:text-base font-space font-semibold">November 14, 2025 | 9:00 AM</span>
+              <span className="text-xs sm:text-sm md:text-base font-space font-semibold">November 14, 2025 | 10:00 AM</span>
             </motion.div>
             <motion.div 
               className="flex items-center gap-2 cyber-card px-4 sm:px-5 py-3 rounded-2xl border-2 border-yellow-500/50"
