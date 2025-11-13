@@ -18,7 +18,7 @@ const EventDetails = () => {
     {
       icon: <Clock className="w-8 h-8" />,
       title: 'Time',
-      info: '9:00 AM Onwards',
+      info: '10:00 AM Onwards',
       description: 'Make sure to arrive on time!',
     },
     {
