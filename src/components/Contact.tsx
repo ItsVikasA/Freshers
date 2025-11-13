@@ -12,8 +12,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      info: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'cse.committee@college.edu',
-      link: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'cse.committee@college.edu'}`,
+      info: 'vikas.ambalazari@gmail.com',
+      link: 'mailto:vikas.ambalazari@gmail.com',
       color: 'neon-blue',
     },
     {

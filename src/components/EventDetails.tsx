@@ -24,8 +24,8 @@ const EventDetails = () => {
     {
       icon: <MapPin className="w-8 h-8" />,
       title: 'Venue',
-      info: process.env.NEXT_PUBLIC_EVENT_VENUE || 'College Auditorium',
-      description: process.env.NEXT_PUBLIC_EVENT_ADDRESS || 'Main Campus Building',
+      info: 'Auditorium',
+      description: 'BGMIT College Mantur Road, Mudhol, Bagalkot',
     },
     {
       icon: <Shirt className="w-8 h-8" />,
