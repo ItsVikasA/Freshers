@@ -7,7 +7,7 @@ import { Calendar, MapPin } from 'lucide-react'
 
 const Hero = () => {
   // Event date - November 14, 2025 at 10:00 AM (Fixed date)
-  const eventDate = '2025-11-14T10:00:00'
+const eventDate = new Date('2025-11-14T10:00:00+05:30')
 
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
     if (completed) {
